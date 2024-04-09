@@ -14,6 +14,7 @@
 		CE09DC372BC5232200264B90 /* Dota2_Update_NotifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09DC362BC5232200264B90 /* Dota2_Update_NotifierTests.swift */; };
 		CE09DC412BC5232200264B90 /* Dota2_Update_NotifierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09DC402BC5232200264B90 /* Dota2_Update_NotifierUITests.swift */; };
 		CE09DC432BC5232200264B90 /* Dota2_Update_NotifierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09DC422BC5232200264B90 /* Dota2_Update_NotifierUITestsLaunchTests.swift */; };
+		CE09DC512BC5246D00264B90 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09DC502BC5246D00264B90 /* NavBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CE09DC3C2BC5232200264B90 /* Dota2 Update NotifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dota2 Update NotifierUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE09DC402BC5232200264B90 /* Dota2_Update_NotifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierUITests.swift; sourceTree = "<group>"; };
 		CE09DC422BC5232200264B90 /* Dota2_Update_NotifierUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE09DC502BC5246D00264B90 /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		CE09DC242BC5231900264B90 /* Dota2 Update Notifier */ = {
 			isa = PBXGroup;
 			children = (
+				CE09DC4F2BC5245000264B90 /* View */,
 				CE09DC252BC5231900264B90 /* Dota2_Update_NotifierApp.swift */,
 				CE09DC272BC5231900264B90 /* ContentView.swift */,
 				CE09DC292BC5232100264B90 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				CE09DC422BC5232200264B90 /* Dota2_Update_NotifierUITestsLaunchTests.swift */,
 			);
 			path = "Dota2 Update NotifierUITests";
+			sourceTree = "<group>";
+		};
+		CE09DC4F2BC5245000264B90 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE09DC502BC5246D00264B90 /* NavBarView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE09DC282BC5231900264B90 /* ContentView.swift in Sources */,
+				CE09DC512BC5246D00264B90 /* NavBarView.swift in Sources */,
 				CE09DC262BC5231900264B90 /* Dota2_Update_NotifierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +442,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +472,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
