@@ -15,4 +15,5 @@ struct NewsItem: Codable {
     var url: String
     var imageURL: URL
     var language: String
+    var isFavorite: Bool
 }
