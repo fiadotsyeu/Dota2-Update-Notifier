@@ -6,13 +6,14 @@
 //
 
 import Foundation
+
 struct NewsItem: Codable {
     var id: UUID
     var title: String
     var leadIn: String
-    var date: Date
+    var date: String
     var content: String
-    var url: String
+    var url: URL
     var imageURL: URL
     var language: String
     var isFavorite: Bool
