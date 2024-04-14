@@ -19,10 +19,12 @@ struct NewsDetail: View {
         @Bindable var modelData = modelData
         
         ScrollView {
-            Image("2151181021")
-                .resizable()
-                .frame(width: .infinity, height: 100)
-            
+            GeometryReader { geometry in
+                Image("d2HeaderItem")
+                    .resizable() // Позволяет изменять размер изображения
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: geometry.size.width)
+            }
             VStack(alignment: .leading) {
                 HStack {
                     Text(newsItem.title)
@@ -52,7 +54,7 @@ struct NewsDetail: View {
                 Text(newsItem.content)
                 Spacer()
             }
-            .padding(.top, 50)
+            .padding(.top, 140)
             
         }
         .padding()
