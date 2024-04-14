@@ -7,71 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE09DC262BC5231900264B90 /* Dota2_Update_NotifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09DC252BC5231900264B90 /* Dota2_Update_NotifierApp.swift */; };
-		CE09DC282BC5231900264B90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09DC272BC5231900264B90 /* ContentView.swift */; };
-		CE09DC2A2BC5232100264B90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE09DC292BC5232100264B90 /* Assets.xcassets */; };
-		CE09DC2D2BC5232100264B90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE09DC2C2BC5232100264B90 /* Preview Assets.xcassets */; };
-		CE09DC372BC5232200264B90 /* Dota2_Update_NotifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09DC362BC5232200264B90 /* Dota2_Update_NotifierTests.swift */; };
-		CE09DC412BC5232200264B90 /* Dota2_Update_NotifierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09DC402BC5232200264B90 /* Dota2_Update_NotifierUITests.swift */; };
-		CE09DC432BC5232200264B90 /* Dota2_Update_NotifierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09DC422BC5232200264B90 /* Dota2_Update_NotifierUITestsLaunchTests.swift */; };
-		CE09DC512BC5246D00264B90 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09DC502BC5246D00264B90 /* NavBarView.swift */; };
-		CE0D37012BCAA7C300DD3335 /* newsItemData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE0D37002BCAA7C300DD3335 /* newsItemData.json */; };
-		CE0D37072BCAAB2E00DD3335 /* modelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D37062BCAAB2D00DD3335 /* modelData.swift */; };
-		CE0D37092BCAAB3E00DD3335 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D37082BCAAB3E00DD3335 /* NewsItem.swift */; };
-		CE0D370C2BCAAB7500DD3335 /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D370B2BCAAB7500DD3335 /* NewsRow.swift */; };
+		CE878E742BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878E732BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift */; };
+		CE878E762BCBB3F7008CD92F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878E752BCBB3F7008CD92F /* ContentView.swift */; };
+		CE878E782BCBB3FA008CD92F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE878E772BCBB3FA008CD92F /* Assets.xcassets */; };
+		CE878E7B2BCBB3FA008CD92F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE878E7A2BCBB3FA008CD92F /* Preview Assets.xcassets */; };
+		CE878E852BCBB3FA008CD92F /* Dota2_Update_NotifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878E842BCBB3FA008CD92F /* Dota2_Update_NotifierTests.swift */; };
+		CE878E8F2BCBB3FB008CD92F /* Dota2_Update_NotifierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878E8E2BCBB3FB008CD92F /* Dota2_Update_NotifierUITests.swift */; };
+		CE878E912BCBB3FB008CD92F /* Dota2_Update_NotifierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878E902BCBB3FB008CD92F /* Dota2_Update_NotifierUITestsLaunchTests.swift */; };
+		CE878EA22BCBB4F7008CD92F /* modelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EA12BCBB4F7008CD92F /* modelData.swift */; };
+		CE878EA42BCBB4FF008CD92F /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EA32BCBB4FF008CD92F /* NewsItem.swift */; };
+		CE878EAB2BCBB51F008CD92F /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EA72BCBB51E008CD92F /* NewsDetail.swift */; };
+		CE878EAC2BCBB51F008CD92F /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EA82BCBB51E008CD92F /* NewsList.swift */; };
+		CE878EAD2BCBB51F008CD92F /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EA92BCBB51F008CD92F /* NewsRow.swift */; };
+		CE878EAE2BCBB51F008CD92F /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EAA2BCBB51F008CD92F /* FavoriteButton.swift */; };
+		CE878EB12BCBB53B008CD92F /* newsItemData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE878EB02BCBB53B008CD92F /* newsItemData.json */; };
+		CE878EB72BCBB5C3008CD92F /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EB62BCBB5C3008CD92F /* NavBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE09DC332BC5232200264B90 /* PBXContainerItemProxy */ = {
+		CE878E812BCBB3FA008CD92F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CE09DC1A2BC5231900264B90 /* Project object */;
+			containerPortal = CE878E682BCBB3F7008CD92F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE09DC212BC5231900264B90;
+			remoteGlobalIDString = CE878E6F2BCBB3F7008CD92F;
 			remoteInfo = "Dota2 Update Notifier";
 		};
-		CE09DC3D2BC5232200264B90 /* PBXContainerItemProxy */ = {
+		CE878E8B2BCBB3FB008CD92F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CE09DC1A2BC5231900264B90 /* Project object */;
+			containerPortal = CE878E682BCBB3F7008CD92F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE09DC212BC5231900264B90;
+			remoteGlobalIDString = CE878E6F2BCBB3F7008CD92F;
 			remoteInfo = "Dota2 Update Notifier";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE09DC222BC5231900264B90 /* Dota2 Update Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dota2 Update Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE09DC252BC5231900264B90 /* Dota2_Update_NotifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierApp.swift; sourceTree = "<group>"; };
-		CE09DC272BC5231900264B90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CE09DC292BC5232100264B90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE09DC2C2BC5232100264B90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CE09DC322BC5232200264B90 /* Dota2 Update NotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dota2 Update NotifierTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE09DC362BC5232200264B90 /* Dota2_Update_NotifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierTests.swift; sourceTree = "<group>"; };
-		CE09DC3C2BC5232200264B90 /* Dota2 Update NotifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dota2 Update NotifierUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE09DC402BC5232200264B90 /* Dota2_Update_NotifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierUITests.swift; sourceTree = "<group>"; };
-		CE09DC422BC5232200264B90 /* Dota2_Update_NotifierUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CE09DC502BC5246D00264B90 /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
-		CE0D37002BCAA7C300DD3335 /* newsItemData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsItemData.json; sourceTree = "<group>"; };
-		CE0D37062BCAAB2D00DD3335 /* modelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = modelData.swift; sourceTree = "<group>"; };
-		CE0D37082BCAAB3E00DD3335 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
-		CE0D370B2BCAAB7500DD3335 /* NewsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRow.swift; sourceTree = "<group>"; };
+		CE878E702BCBB3F7008CD92F /* Dota2 Update Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dota2 Update Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE878E732BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierApp.swift; sourceTree = "<group>"; };
+		CE878E752BCBB3F7008CD92F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE878E772BCBB3FA008CD92F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE878E7A2BCBB3FA008CD92F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE878E802BCBB3FA008CD92F /* Dota2 Update NotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dota2 Update NotifierTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE878E842BCBB3FA008CD92F /* Dota2_Update_NotifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierTests.swift; sourceTree = "<group>"; };
+		CE878E8A2BCBB3FB008CD92F /* Dota2 Update NotifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dota2 Update NotifierUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE878E8E2BCBB3FB008CD92F /* Dota2_Update_NotifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierUITests.swift; sourceTree = "<group>"; };
+		CE878E902BCBB3FB008CD92F /* Dota2_Update_NotifierUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE878EA12BCBB4F7008CD92F /* modelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = modelData.swift; sourceTree = "<group>"; };
+		CE878EA32BCBB4FF008CD92F /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		CE878EA72BCBB51E008CD92F /* NewsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetail.swift; sourceTree = "<group>"; };
+		CE878EA82BCBB51E008CD92F /* NewsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
+		CE878EA92BCBB51F008CD92F /* NewsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRow.swift; sourceTree = "<group>"; };
+		CE878EAA2BCBB51F008CD92F /* FavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		CE878EB02BCBB53B008CD92F /* newsItemData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsItemData.json; sourceTree = "<group>"; };
+		CE878EB62BCBB5C3008CD92F /* NavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE09DC1F2BC5231900264B90 /* Frameworks */ = {
+		CE878E6D2BCBB3F7008CD92F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE09DC2F2BC5232200264B90 /* Frameworks */ = {
+		CE878E7D2BCBB3FA008CD92F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE09DC392BC5232200264B90 /* Frameworks */ = {
+		CE878E872BCBB3FB008CD92F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,109 +87,112 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE09DC192BC5231900264B90 = {
+		CE878E672BCBB3F7008CD92F = {
 			isa = PBXGroup;
 			children = (
-				CE09DC242BC5231900264B90 /* Dota2 Update Notifier */,
-				CE09DC352BC5232200264B90 /* Dota2 Update NotifierTests */,
-				CE09DC3F2BC5232200264B90 /* Dota2 Update NotifierUITests */,
-				CE09DC232BC5231900264B90 /* Products */,
+				CE878E722BCBB3F7008CD92F /* Dota2 Update Notifier */,
+				CE878E832BCBB3FA008CD92F /* Dota2 Update NotifierTests */,
+				CE878E8D2BCBB3FB008CD92F /* Dota2 Update NotifierUITests */,
+				CE878E712BCBB3F7008CD92F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CE09DC232BC5231900264B90 /* Products */ = {
+		CE878E712BCBB3F7008CD92F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE09DC222BC5231900264B90 /* Dota2 Update Notifier.app */,
-				CE09DC322BC5232200264B90 /* Dota2 Update NotifierTests.xctest */,
-				CE09DC3C2BC5232200264B90 /* Dota2 Update NotifierUITests.xctest */,
+				CE878E702BCBB3F7008CD92F /* Dota2 Update Notifier.app */,
+				CE878E802BCBB3FA008CD92F /* Dota2 Update NotifierTests.xctest */,
+				CE878E8A2BCBB3FB008CD92F /* Dota2 Update NotifierUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE09DC242BC5231900264B90 /* Dota2 Update Notifier */ = {
+		CE878E722BCBB3F7008CD92F /* Dota2 Update Notifier */ = {
 			isa = PBXGroup;
 			children = (
-				CE0D370A2BCAAB6700DD3335 /* Modul */,
-				CE0D37052BCAAB2200DD3335 /* Model */,
-				CE0D36F92BCAA62200DD3335 /* Resources */,
-				CE09DC4F2BC5245000264B90 /* View */,
-				CE09DC252BC5231900264B90 /* Dota2_Update_NotifierApp.swift */,
-				CE09DC272BC5231900264B90 /* ContentView.swift */,
-				CE09DC292BC5232100264B90 /* Assets.xcassets */,
-				CE09DC2B2BC5232100264B90 /* Preview Content */,
+				CE878EB32BCBB572008CD92F /* View */,
+				CE878EAF2BCBB528008CD92F /* Resources */,
+				CE878EA62BCBB511008CD92F /* Modul */,
+				CE878EA02BCBB4E9008CD92F /* Model */,
+				CE878E732BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift */,
+				CE878E752BCBB3F7008CD92F /* ContentView.swift */,
+				CE878E772BCBB3FA008CD92F /* Assets.xcassets */,
+				CE878E792BCBB3FA008CD92F /* Preview Content */,
 			);
 			path = "Dota2 Update Notifier";
 			sourceTree = "<group>";
 		};
-		CE09DC2B2BC5232100264B90 /* Preview Content */ = {
+		CE878E792BCBB3FA008CD92F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				CE09DC2C2BC5232100264B90 /* Preview Assets.xcassets */,
+				CE878E7A2BCBB3FA008CD92F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CE09DC352BC5232200264B90 /* Dota2 Update NotifierTests */ = {
+		CE878E832BCBB3FA008CD92F /* Dota2 Update NotifierTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE09DC362BC5232200264B90 /* Dota2_Update_NotifierTests.swift */,
+				CE878E842BCBB3FA008CD92F /* Dota2_Update_NotifierTests.swift */,
 			);
 			path = "Dota2 Update NotifierTests";
 			sourceTree = "<group>";
 		};
-		CE09DC3F2BC5232200264B90 /* Dota2 Update NotifierUITests */ = {
+		CE878E8D2BCBB3FB008CD92F /* Dota2 Update NotifierUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CE09DC402BC5232200264B90 /* Dota2_Update_NotifierUITests.swift */,
-				CE09DC422BC5232200264B90 /* Dota2_Update_NotifierUITestsLaunchTests.swift */,
+				CE878E8E2BCBB3FB008CD92F /* Dota2_Update_NotifierUITests.swift */,
+				CE878E902BCBB3FB008CD92F /* Dota2_Update_NotifierUITestsLaunchTests.swift */,
 			);
 			path = "Dota2 Update NotifierUITests";
 			sourceTree = "<group>";
 		};
-		CE09DC4F2BC5245000264B90 /* View */ = {
+		CE878EA02BCBB4E9008CD92F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CE09DC502BC5246D00264B90 /* NavBarView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CE0D36F92BCAA62200DD3335 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CE0D37002BCAA7C300DD3335 /* newsItemData.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		CE0D37052BCAAB2200DD3335 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE0D37062BCAAB2D00DD3335 /* modelData.swift */,
-				CE0D37082BCAAB3E00DD3335 /* NewsItem.swift */,
+				CE878EA12BCBB4F7008CD92F /* modelData.swift */,
+				CE878EA32BCBB4FF008CD92F /* NewsItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CE0D370A2BCAAB6700DD3335 /* Modul */ = {
+		CE878EA62BCBB511008CD92F /* Modul */ = {
 			isa = PBXGroup;
 			children = (
-				CE0D370B2BCAAB7500DD3335 /* NewsRow.swift */,
+				CE878EAA2BCBB51F008CD92F /* FavoriteButton.swift */,
+				CE878EA72BCBB51E008CD92F /* NewsDetail.swift */,
+				CE878EA82BCBB51E008CD92F /* NewsList.swift */,
+				CE878EA92BCBB51F008CD92F /* NewsRow.swift */,
 			);
 			path = Modul;
+			sourceTree = "<group>";
+		};
+		CE878EAF2BCBB528008CD92F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE878EB02BCBB53B008CD92F /* newsItemData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE878EB32BCBB572008CD92F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE878EB62BCBB5C3008CD92F /* NavBarView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE09DC212BC5231900264B90 /* Dota2 Update Notifier */ = {
+		CE878E6F2BCBB3F7008CD92F /* Dota2 Update Notifier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE09DC462BC5232200264B90 /* Build configuration list for PBXNativeTarget "Dota2 Update Notifier" */;
+			buildConfigurationList = CE878E942BCBB3FB008CD92F /* Build configuration list for PBXNativeTarget "Dota2 Update Notifier" */;
 			buildPhases = (
-				CE09DC1E2BC5231900264B90 /* Sources */,
-				CE09DC1F2BC5231900264B90 /* Frameworks */,
-				CE09DC202BC5231900264B90 /* Resources */,
+				CE878E6C2BCBB3F7008CD92F /* Sources */,
+				CE878E6D2BCBB3F7008CD92F /* Frameworks */,
+				CE878E6E2BCBB3F7008CD92F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -191,69 +200,69 @@
 			);
 			name = "Dota2 Update Notifier";
 			productName = "Dota2 Update Notifier";
-			productReference = CE09DC222BC5231900264B90 /* Dota2 Update Notifier.app */;
+			productReference = CE878E702BCBB3F7008CD92F /* Dota2 Update Notifier.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE09DC312BC5232200264B90 /* Dota2 Update NotifierTests */ = {
+		CE878E7F2BCBB3FA008CD92F /* Dota2 Update NotifierTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE09DC492BC5232200264B90 /* Build configuration list for PBXNativeTarget "Dota2 Update NotifierTests" */;
+			buildConfigurationList = CE878E972BCBB3FB008CD92F /* Build configuration list for PBXNativeTarget "Dota2 Update NotifierTests" */;
 			buildPhases = (
-				CE09DC2E2BC5232200264B90 /* Sources */,
-				CE09DC2F2BC5232200264B90 /* Frameworks */,
-				CE09DC302BC5232200264B90 /* Resources */,
+				CE878E7C2BCBB3FA008CD92F /* Sources */,
+				CE878E7D2BCBB3FA008CD92F /* Frameworks */,
+				CE878E7E2BCBB3FA008CD92F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CE09DC342BC5232200264B90 /* PBXTargetDependency */,
+				CE878E822BCBB3FA008CD92F /* PBXTargetDependency */,
 			);
 			name = "Dota2 Update NotifierTests";
 			productName = "Dota2 Update NotifierTests";
-			productReference = CE09DC322BC5232200264B90 /* Dota2 Update NotifierTests.xctest */;
+			productReference = CE878E802BCBB3FA008CD92F /* Dota2 Update NotifierTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CE09DC3B2BC5232200264B90 /* Dota2 Update NotifierUITests */ = {
+		CE878E892BCBB3FB008CD92F /* Dota2 Update NotifierUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE09DC4C2BC5232200264B90 /* Build configuration list for PBXNativeTarget "Dota2 Update NotifierUITests" */;
+			buildConfigurationList = CE878E9A2BCBB3FB008CD92F /* Build configuration list for PBXNativeTarget "Dota2 Update NotifierUITests" */;
 			buildPhases = (
-				CE09DC382BC5232200264B90 /* Sources */,
-				CE09DC392BC5232200264B90 /* Frameworks */,
-				CE09DC3A2BC5232200264B90 /* Resources */,
+				CE878E862BCBB3FB008CD92F /* Sources */,
+				CE878E872BCBB3FB008CD92F /* Frameworks */,
+				CE878E882BCBB3FB008CD92F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CE09DC3E2BC5232200264B90 /* PBXTargetDependency */,
+				CE878E8C2BCBB3FB008CD92F /* PBXTargetDependency */,
 			);
 			name = "Dota2 Update NotifierUITests";
 			productName = "Dota2 Update NotifierUITests";
-			productReference = CE09DC3C2BC5232200264B90 /* Dota2 Update NotifierUITests.xctest */;
+			productReference = CE878E8A2BCBB3FB008CD92F /* Dota2 Update NotifierUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE09DC1A2BC5231900264B90 /* Project object */ = {
+		CE878E682BCBB3F7008CD92F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					CE09DC212BC5231900264B90 = {
+					CE878E6F2BCBB3F7008CD92F = {
 						CreatedOnToolsVersion = 15.2;
 					};
-					CE09DC312BC5232200264B90 = {
+					CE878E7F2BCBB3FA008CD92F = {
 						CreatedOnToolsVersion = 15.2;
-						TestTargetID = CE09DC212BC5231900264B90;
+						TestTargetID = CE878E6F2BCBB3F7008CD92F;
 					};
-					CE09DC3B2BC5232200264B90 = {
+					CE878E892BCBB3FB008CD92F = {
 						CreatedOnToolsVersion = 15.2;
-						TestTargetID = CE09DC212BC5231900264B90;
+						TestTargetID = CE878E6F2BCBB3F7008CD92F;
 					};
 				};
 			};
-			buildConfigurationList = CE09DC1D2BC5231900264B90 /* Build configuration list for PBXProject "Dota2 Update Notifier" */;
+			buildConfigurationList = CE878E6B2BCBB3F7008CD92F /* Build configuration list for PBXProject "Dota2 Update Notifier" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -261,37 +270,37 @@
 				en,
 				Base,
 			);
-			mainGroup = CE09DC192BC5231900264B90;
-			productRefGroup = CE09DC232BC5231900264B90 /* Products */;
+			mainGroup = CE878E672BCBB3F7008CD92F;
+			productRefGroup = CE878E712BCBB3F7008CD92F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE09DC212BC5231900264B90 /* Dota2 Update Notifier */,
-				CE09DC312BC5232200264B90 /* Dota2 Update NotifierTests */,
-				CE09DC3B2BC5232200264B90 /* Dota2 Update NotifierUITests */,
+				CE878E6F2BCBB3F7008CD92F /* Dota2 Update Notifier */,
+				CE878E7F2BCBB3FA008CD92F /* Dota2 Update NotifierTests */,
+				CE878E892BCBB3FB008CD92F /* Dota2 Update NotifierUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE09DC202BC5231900264B90 /* Resources */ = {
+		CE878E6E2BCBB3F7008CD92F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE09DC2D2BC5232100264B90 /* Preview Assets.xcassets in Resources */,
-				CE0D37012BCAA7C300DD3335 /* newsItemData.json in Resources */,
-				CE09DC2A2BC5232100264B90 /* Assets.xcassets in Resources */,
+				CE878E7B2BCBB3FA008CD92F /* Preview Assets.xcassets in Resources */,
+				CE878EB12BCBB53B008CD92F /* newsItemData.json in Resources */,
+				CE878E782BCBB3FA008CD92F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE09DC302BC5232200264B90 /* Resources */ = {
+		CE878E7E2BCBB3FA008CD92F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE09DC3A2BC5232200264B90 /* Resources */ = {
+		CE878E882BCBB3FB008CD92F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -301,53 +310,56 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CE09DC1E2BC5231900264B90 /* Sources */ = {
+		CE878E6C2BCBB3F7008CD92F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE09DC282BC5231900264B90 /* ContentView.swift in Sources */,
-				CE0D370C2BCAAB7500DD3335 /* NewsRow.swift in Sources */,
-				CE0D37092BCAAB3E00DD3335 /* NewsItem.swift in Sources */,
-				CE0D37072BCAAB2E00DD3335 /* modelData.swift in Sources */,
-				CE09DC512BC5246D00264B90 /* NavBarView.swift in Sources */,
-				CE09DC262BC5231900264B90 /* Dota2_Update_NotifierApp.swift in Sources */,
+				CE878EAC2BCBB51F008CD92F /* NewsList.swift in Sources */,
+				CE878E762BCBB3F7008CD92F /* ContentView.swift in Sources */,
+				CE878EA42BCBB4FF008CD92F /* NewsItem.swift in Sources */,
+				CE878EAE2BCBB51F008CD92F /* FavoriteButton.swift in Sources */,
+				CE878EB72BCBB5C3008CD92F /* NavBarView.swift in Sources */,
+				CE878E742BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift in Sources */,
+				CE878EAB2BCBB51F008CD92F /* NewsDetail.swift in Sources */,
+				CE878EAD2BCBB51F008CD92F /* NewsRow.swift in Sources */,
+				CE878EA22BCBB4F7008CD92F /* modelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE09DC2E2BC5232200264B90 /* Sources */ = {
+		CE878E7C2BCBB3FA008CD92F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE09DC372BC5232200264B90 /* Dota2_Update_NotifierTests.swift in Sources */,
+				CE878E852BCBB3FA008CD92F /* Dota2_Update_NotifierTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE09DC382BC5232200264B90 /* Sources */ = {
+		CE878E862BCBB3FB008CD92F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE09DC432BC5232200264B90 /* Dota2_Update_NotifierUITestsLaunchTests.swift in Sources */,
-				CE09DC412BC5232200264B90 /* Dota2_Update_NotifierUITests.swift in Sources */,
+				CE878E912BCBB3FB008CD92F /* Dota2_Update_NotifierUITestsLaunchTests.swift in Sources */,
+				CE878E8F2BCBB3FB008CD92F /* Dota2_Update_NotifierUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CE09DC342BC5232200264B90 /* PBXTargetDependency */ = {
+		CE878E822BCBB3FA008CD92F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE09DC212BC5231900264B90 /* Dota2 Update Notifier */;
-			targetProxy = CE09DC332BC5232200264B90 /* PBXContainerItemProxy */;
+			target = CE878E6F2BCBB3F7008CD92F /* Dota2 Update Notifier */;
+			targetProxy = CE878E812BCBB3FA008CD92F /* PBXContainerItemProxy */;
 		};
-		CE09DC3E2BC5232200264B90 /* PBXTargetDependency */ = {
+		CE878E8C2BCBB3FB008CD92F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE09DC212BC5231900264B90 /* Dota2 Update Notifier */;
-			targetProxy = CE09DC3D2BC5232200264B90 /* PBXContainerItemProxy */;
+			target = CE878E6F2BCBB3F7008CD92F /* Dota2 Update Notifier */;
+			targetProxy = CE878E8B2BCBB3FB008CD92F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		CE09DC442BC5232200264B90 /* Debug */ = {
+		CE878E922BCBB3FB008CD92F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -399,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -410,7 +422,7 @@
 			};
 			name = Debug;
 		};
-		CE09DC452BC5232200264B90 /* Release */ = {
+		CE878E932BCBB3FB008CD92F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -456,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -466,7 +478,7 @@
 			};
 			name = Release;
 		};
-		CE09DC472BC5232200264B90 /* Debug */ = {
+		CE878E952BCBB3FB008CD92F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -482,13 +494,12 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Endree-Eph.Dota2-Update-Notifier";
+				PRODUCT_BUNDLE_IDENTIFIER = "DreF.Dota2-Update-Notifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -496,7 +507,7 @@
 			};
 			name = Debug;
 		};
-		CE09DC482BC5232200264B90 /* Release */ = {
+		CE878E962BCBB3FB008CD92F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -512,13 +523,12 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Endree-Eph.Dota2-Update-Notifier";
+				PRODUCT_BUNDLE_IDENTIFIER = "DreF.Dota2-Update-Notifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -526,7 +536,7 @@
 			};
 			name = Release;
 		};
-		CE09DC4A2BC5232200264B90 /* Debug */ = {
+		CE878E982BCBB3FB008CD92F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -537,7 +547,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Endree-Eph.Dota2-Update-NotifierTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "DreF.Dota2-Update-NotifierTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -546,7 +556,7 @@
 			};
 			name = Debug;
 		};
-		CE09DC4B2BC5232200264B90 /* Release */ = {
+		CE878E992BCBB3FB008CD92F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -557,7 +567,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Endree-Eph.Dota2-Update-NotifierTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "DreF.Dota2-Update-NotifierTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -566,7 +576,7 @@
 			};
 			name = Release;
 		};
-		CE09DC4D2BC5232200264B90 /* Debug */ = {
+		CE878E9B2BCBB3FB008CD92F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -575,7 +585,7 @@
 				DEVELOPMENT_TEAM = 467Y563ZU5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Endree-Eph.Dota2-Update-NotifierUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "DreF.Dota2-Update-NotifierUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -584,7 +594,7 @@
 			};
 			name = Debug;
 		};
-		CE09DC4E2BC5232200264B90 /* Release */ = {
+		CE878E9C2BCBB3FB008CD92F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -593,7 +603,7 @@
 				DEVELOPMENT_TEAM = 467Y563ZU5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Endree-Eph.Dota2-Update-NotifierUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "DreF.Dota2-Update-NotifierUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -605,43 +615,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE09DC1D2BC5231900264B90 /* Build configuration list for PBXProject "Dota2 Update Notifier" */ = {
+		CE878E6B2BCBB3F7008CD92F /* Build configuration list for PBXProject "Dota2 Update Notifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE09DC442BC5232200264B90 /* Debug */,
-				CE09DC452BC5232200264B90 /* Release */,
+				CE878E922BCBB3FB008CD92F /* Debug */,
+				CE878E932BCBB3FB008CD92F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE09DC462BC5232200264B90 /* Build configuration list for PBXNativeTarget "Dota2 Update Notifier" */ = {
+		CE878E942BCBB3FB008CD92F /* Build configuration list for PBXNativeTarget "Dota2 Update Notifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE09DC472BC5232200264B90 /* Debug */,
-				CE09DC482BC5232200264B90 /* Release */,
+				CE878E952BCBB3FB008CD92F /* Debug */,
+				CE878E962BCBB3FB008CD92F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE09DC492BC5232200264B90 /* Build configuration list for PBXNativeTarget "Dota2 Update NotifierTests" */ = {
+		CE878E972BCBB3FB008CD92F /* Build configuration list for PBXNativeTarget "Dota2 Update NotifierTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE09DC4A2BC5232200264B90 /* Debug */,
-				CE09DC4B2BC5232200264B90 /* Release */,
+				CE878E982BCBB3FB008CD92F /* Debug */,
+				CE878E992BCBB3FB008CD92F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE09DC4C2BC5232200264B90 /* Build configuration list for PBXNativeTarget "Dota2 Update NotifierUITests" */ = {
+		CE878E9A2BCBB3FB008CD92F /* Build configuration list for PBXNativeTarget "Dota2 Update NotifierUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE09DC4D2BC5232200264B90 /* Debug */,
-				CE09DC4E2BC5232200264B90 /* Release */,
+				CE878E9B2BCBB3FB008CD92F /* Debug */,
+				CE878E9C2BCBB3FB008CD92F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CE09DC1A2BC5231900264B90 /* Project object */;
+	rootObject = CE878E682BCBB3F7008CD92F /* Project object */;
 }
