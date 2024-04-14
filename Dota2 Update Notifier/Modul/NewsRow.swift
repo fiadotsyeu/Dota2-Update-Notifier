@@ -22,15 +22,15 @@ struct NewsRow: View {
             }
             HStack {
                 if newsItem.isFavorite {
-                    Image("Heart_fill")
+                    Image("Heart.fill")
                         .resizable()
                         .frame(width: 15, height: 15)
-                        .colorMultiply(Color("Color_heart_fill"))
+                        .colorMultiply(.red)
                 } else {
                     Image("Heart")
                         .resizable()
                         .frame(width: 15, height: 15)
-                        .colorMultiply(Color("Color_heart"))
+                        .colorMultiply(.gray)
                 }
                 Spacer()
                 Text(newsItem.date)
@@ -46,5 +46,6 @@ struct NewsRow: View {
     let newsItems = ModelData().newsItems
     return Group {
         NewsRow(newsItem: newsItems[0])
+        NewsRow(newsItem: newsItems[1])
     }
 }
