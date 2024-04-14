@@ -19,11 +19,11 @@ struct NavBarView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selectTab) {
-                NewsList()
+                NewsListView()
                     .tag("News")
                 Text("Updates")
                     .tag("Updates")
-                Text("Favorits")
+                FavoritsView()
                     .tag("Heart")
                 Text("Settings")
                     .tag("Settings")
