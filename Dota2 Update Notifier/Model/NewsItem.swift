@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct NewsItem: Codable {
-    var id: UUID
+struct NewsItem: Codable, Identifiable, Hashable {
+    var id: Int
     var title: String
     var leadIn: String
     var date: String
@@ -17,4 +17,6 @@ struct NewsItem: Codable {
     var imageURL: URL
     var language: String
     var isFavorite: Bool
+    
+    
 }
