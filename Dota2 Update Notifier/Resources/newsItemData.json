@@ -1,22 +1,23 @@
 [{
-    "id": "E621E1F8-C36C-495A-93FC-0C247A3E6E5F",
+    "id": 0,
     "title": "7.35d",
     "leadIn": "Gameplay Update",
-    "date": "1990-05-15T00:00:00",
+    "date": "28 MARCH 2024",
     "content": "NEUTRAL CREEP UPDATES GENERAL Bonus experience from stacking neutral camps decreased from 30% to 25% MUD GOLEM Gold bounty decreased by 3 SATYR MINDSTEALER Gold bounty decreased by 2",
     "url": "https://www.dota2.com/patches/7.35d",
-    "imageURL": "https://www.dota2.com/patches/7.35d",
+    "imageURL": "2151181021",
     "language": "ENG",
     "isFavorite": false
 },{
-    "id": "1D92C87B-DA34-4BC4-8121-6E1531B91982",
+    "id": 1,
     "title": "7.35c",
     "leadIn": "Gameplay Update",
-    "date": "1990-05-15T00:00:00",
+    "date": "28 MARCH 2024",
     "content": "NEUTRAL CREEP UPDATES GENERAL Bonus experience from stacking neutral camps decreased from 30% to 25% MUD GOLEM Gold bounty decreased by 3 SATYR MINDSTEALER Gold bounty decreased by 2",
     "url": "https://www.dota2.com/patches/7.35c",
-    "imageURL": "https://www.dota2.com/patches/7.35c",
+    "imageURL": "2151181021",
     "language": "ENG",
-    "isFavorite": false
+    "isFavorite": true
+
 },
 ]
