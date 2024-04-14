@@ -32,7 +32,6 @@ struct NewsDetail: View {
                         .bold()
                     Spacer()
                     FavoriteButton(isSet: $modelData.newsItems[newsItemIndex].isFavorite)
-                        .padding(.bottom)
                 }
                 
                 HStack {
