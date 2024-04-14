@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct FavoritsView: View {
+    @Environment(ModelData.self) var modelData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(modelData.newsItems) { newsItem in
+                if newsItem.isFavorite {
+                    NavigationLink(destination: NewsDetail(newsItem: newsItem)) {
+                        NewsRow(newsItem: newsItem)
+                    }
+                }
+            }
+            .navigationTitle("Favorits")
+        }
     }
 }
 
 #Preview {
     FavoritsView()
+        .environment(ModelData())
 }
