@@ -21,7 +21,7 @@ struct NavBarView: View {
             TabView(selection: $selectTab) {
                 NewsListView()
                     .tag("News")
-                Text("Patches")
+                PatchesView()
                     .tag("Patches")
                 FavoritsView()
                     .tag("Favorites")
