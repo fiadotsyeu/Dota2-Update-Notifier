@@ -22,12 +22,12 @@ struct NewsRow: View {
             }
             HStack {
                 if newsItem.isFavorite {
-                    Image("Heart.fill")
+                    Image("Favorites.fill")
                         .resizable()
                         .frame(width: 15, height: 15)
                         .colorMultiply(.red)
                 } else {
-                    Image("Heart")
+                    Image("Favorites")
                         .resizable()
                         .frame(width: 15, height: 15)
                         .colorMultiply(.gray)

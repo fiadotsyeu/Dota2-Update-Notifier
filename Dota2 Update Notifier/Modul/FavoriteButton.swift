@@ -14,7 +14,7 @@ struct FavoriteButton: View {
         Button {
             isSet.toggle()
         } label: {
-            Image(isSet ? "Heart.fill" : "Heart")
+            Image(isSet ? "Favorits.fill" : "Favorits")
                 .resizable()
                 .frame(width: 25, height: 25)
                 .colorMultiply(isSet ? .red : .gray)
