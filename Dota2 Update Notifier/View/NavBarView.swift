@@ -10,7 +10,7 @@ import SwiftUI
 struct NavBarView: View {
     @State var selectTab = "News"
     
-    let tabs = ["News", "Updates", "Heart", "Settings"]
+    let tabs = ["News", "Patches", "Favorites", "Settings"]
     
     init() {
         UITabBar.appearance().isHidden = true
@@ -21,11 +21,11 @@ struct NavBarView: View {
             TabView(selection: $selectTab) {
                 NewsListView()
                     .tag("News")
-                Text("Updates")
-                    .tag("Updates")
+                Text("Patches")
+                    .tag("Patches")
                 FavoritsView()
-                    .tag("Heart")
-                Text("Settings")
+                    .tag("Favorites")
+                SettingsView()
                     .tag("Settings")
             }
             
@@ -59,10 +59,17 @@ struct NavBarItem: View {
                 }
             } label: {
                 HStack {
-                    Image(tab)
-                        .resizable()
-                        .frame(width: 20, height: 20)
-                        .colorInvert()
+                    if (tab == "Favorites" && selected == tab) {
+                        Image("Favorites.fill")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .colorMultiply(.red)
+                    } else {
+                        Image(tab)
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .colorMultiply(.black)
+                    }
                     if selected == tab {
                         Text(tab)
                             .foregroundColor(.black)
