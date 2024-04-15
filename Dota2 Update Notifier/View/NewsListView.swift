@@ -9,15 +9,30 @@ import SwiftUI
 
 struct NewsListView: View {
     @Environment(ModelData.self) var modelData
+    @State private var showInternationalOnly = false
+    
+    var filteredNewsItems: [NewsItem] {
+        modelData.newsItems.filter { newsItem in
+            (!showInternationalOnly || newsItem.tag.contains("international"))
+        }
+    }
     
     var body: some View {
         NavigationView {
-            List(modelData.newsItems) { newsItem in
-                NavigationLink(destination: NewsDetail(newsItem: newsItem)) {
-                    NewsRow(newsItem: newsItem)
+            List {
+                Section(header: Text("All news and patches")) {
+                    Toggle(isOn: $showInternationalOnly) {
+                        Text("The International only")
+                    }
+                    ForEach(filteredNewsItems) { newsItem in
+                        NavigationLink(destination: NewsDetail(newsItem: newsItem)) {
+                            NewsRow(newsItem: newsItem)
+                        }
+                    }
                 }
             }
-            .navigationTitle("Dota Updates Notifer")
+            .animation(.default, value: filteredNewsItems)
+            .navigationTitle("Dota Updates Notifier")
         }
     }
 }
