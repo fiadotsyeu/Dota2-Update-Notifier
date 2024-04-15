@@ -12,10 +12,14 @@ struct FavoritsView: View {
     
     var body: some View {
         NavigationView {
-            List(modelData.newsItems) { newsItem in
-                if newsItem.isFavorite {
-                    NavigationLink(destination: NewsDetail(newsItem: newsItem)) {
-                        NewsRow(newsItem: newsItem)
+            List {
+                Section(header: Text("Favorite patches and news")) {
+                    ForEach(modelData.newsItems) { newsItem in
+                        if newsItem.isFavorite {
+                            NavigationLink(destination: NewsDetail(newsItem: newsItem)) {
+                                NewsRow(newsItem: newsItem)
+                            }
+                        }
                     }
                 }
             }
