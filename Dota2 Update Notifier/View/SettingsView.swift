@@ -30,11 +30,13 @@ struct SettingsView: View {
                 }
                 
                 Section(header: Text("Appearance")) {
-                    Toggle("Dark Mode", isOn: $darkMode)
+                    Toggle(isOn: $darkMode) {
+                        hStackOnOff(state: darkMode, text: "Dark Mode")
+                    }
                 }
                 
                 Section(header: Text("Language")) {
-                    Picker(selection: $selectedOptionlanguage, label: Text("Select Option")) {
+                    Picker(selection: $selectedOptionlanguage, label: Text("Select a language")) {
                         Text("ENG").tag(0)
                         Text("CZ").tag(1)
                         Text("UA").tag(2)
@@ -43,7 +45,7 @@ struct SettingsView: View {
                     .pickerStyle(DefaultPickerStyle())
                 }
             }
-            .navigationBarTitle("Settings")
+            .navigationTitle("Settings")
         }
     }
 }
