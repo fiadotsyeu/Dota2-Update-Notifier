@@ -2,10 +2,18 @@
   <img src="logo.png">
 </p>
 
-Hello! In 2019, the dota2.com website switched to clean-html, which means that it was no longer possible to scrape data from the site using popular libraries like Beautiful Soup, SwiftSoup, and similar ones. This led to the closure of all projects that collected data on Dota 2 updates and provided them in a convenient format on other resources. This application is a revival. Now you can not only view the list of changes but also receive notifications about events, new patches, and other Dota 2 updates. You can also install a widget.
+### **Description:**
+Welcome to the Dota2 News and Updates app, built with Swift! This app is designed to keep Dota2 enthusiasts up-to-date with the latest news, updates, and professional gaming statistics. Whether you're a seasoned player or just starting out, this app has something for you.
 
-### **Progect link:** ---
+### **Key Features:**
+- **News and Updates:** Stay informed with the latest news and updates from the Dota2 community.
+- **Notifications:** Receive timely notifications about important events and updates in the Dota2 world.
+- **Widget Support:** Customize your iOS device with a widget to display real-time Dota2 information right on your home screen.
+- **Professional Gaming Stats:** Dive into detailed statistics of professional Dota2 matches to track your favorite teams and players.
 
-## **In the project, i use:**
-- Swift
+### **Project Goals:**
+- Provide a comprehensive and user-friendly platform for Dota2 enthusiasts.
+- Enhance user engagement through timely notifications and widget integration.
 
+### **Contributions:**
+Contributions and feedback are always welcome! Whether you're a seasoned developer or just starting out, there are plenty of opportunities to get involved and make this project even better. Feel free to submit bug reports, feature requests, or even pull requests to contribute directly to the development.
