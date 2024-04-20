@@ -11,9 +11,14 @@ struct NewsDetail: View {
     @Environment(ModelData.self) var modelData
     var newsItem: NewsItem
     
-    var newsItemIndex: Int {
-        modelData.newsItems.firstIndex(where: { $0.id == newsItem.id })!
+    var newsItemIndex: Int? {
+        if newsItem == newsItem {
+            return modelData.newsItems.firstIndex(where: { $0.id == newsItem.id })
+        } else {
+            return nil
+        }
     }
+
     
     var body: some View {
         @Bindable var modelData = modelData
@@ -21,7 +26,7 @@ struct NewsDetail: View {
         ScrollView {
             GeometryReader { geometry in
                 Image("d2HeaderItem")
-                    .resizable() // Позволяет изменять размер изображения
+                    .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: geometry.size.width)
             }
@@ -31,13 +36,18 @@ struct NewsDetail: View {
                         .font(.title)
                         .bold()
                     Spacer()
-                    FavoriteButton(isSet: $modelData.newsItems[newsItemIndex].isFavorite)
+                    FavoriteButton(isSet: $modelData.newsItems[newsItemIndex!].isFavorite)
                 }
                 
                 HStack {
                     Text("URL: ")
                         .bold()
-                    Link("Go to the link", destination: newsItem.url)
+                    if let url = newsItem.url {
+                        Link("Go to the link", destination: url)
+                    } else {
+                        // Обработка случая, когда url равен nil
+                        Text("No link available")
+                    }
                     Spacer()
                     Text("Date:")
                         .bold()
@@ -47,8 +57,7 @@ struct NewsDetail: View {
                 
                 Divider()
                 
-                Text(newsItem.leadIn)
-                    .font(.system(size: 25))
+                
                 Spacer()
                 Text(newsItem.content)
                 Spacer()
