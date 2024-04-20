@@ -22,20 +22,42 @@ class RSSParser: NSObject, XMLParserDelegate {
     var links: [String] = []
     var imgURLs: [String] = []
     
-    func parseRSS(url: URL) {
-        parser = XMLParser(contentsOf: url)
-        parser?.delegate = self
-        parser?.parse()
+    var modelData: ModelData
+    
+    init(modelData: ModelData) {
+        self.modelData = modelData
+    }
+    
+    func parseRSS(from url: URL) {
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                print("Error fetching RSS data: \(error)")
+                return
+            }
+            
+            guard let data = data else {
+                print("No data received from RSS feed")
+                return
+            }
+            
+            let parser = XMLParser(data: data)
+            parser.delegate = self
+            parser.parse()
+        }
+        
+        task.resume()
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-            currentElement = elementName
-            if elementName == "enclosure" {
-                if let url = attributeDict["url"] {
-                    currentImgURL = url
-                }
+        currentElement = elementName
+        if elementName == "enclosure" {
+            if let url = attributeDict["url"] {
+                currentImgURL = url
             }
         }
+    }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         if currentElement == "title" {
@@ -51,11 +73,9 @@ class RSSParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item" {
-            titles.append(currentTitle)
-            descriptions.append(currentDescription)
-            pubDates.append(currentPubDate)
-            links.append(currentLink)
-            imgURLs.append(currentImgURL)
+            let newsItem = NewsItem(title: currentTitle, date: currentPubDate, content: currentDescription, url: URL(string: currentLink), imageURL: URL(string: currentImgURL), isFavorite: false, tag: "ss")
+            
+            modelData.newsItems.append(newsItem)
             currentTitle = ""
             currentDescription = ""
             currentPubDate = ""
@@ -65,13 +85,9 @@ class RSSParser: NSObject, XMLParserDelegate {
     }
     
     func parserDidEndDocument(_ parser: XMLParser) {
-        print("Titles: \(titles)")
-        print("Descriptions: \(descriptions)")
-        print("PubDate: \(pubDates)")
-        print("link: \(links)")
-        print("img: \(imgURLs)")
+        modelData.save()
+        print(modelData.newsItems.count)
     }
-    
 }
 
 
