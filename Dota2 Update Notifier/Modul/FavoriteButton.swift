@@ -9,10 +9,12 @@ import SwiftUI
 
 struct FavoriteButton: View {
     @Binding var isSet: Bool
+    @Environment(ModelData.self) var modelData
     
     var body: some View {
         Button {
             isSet.toggle()
+            modelData.save()
         } label: {
             Image(isSet ? "Favorites.fill" : "Favorites")
                 .resizable()
