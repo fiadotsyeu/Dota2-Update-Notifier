@@ -15,6 +15,7 @@ class RSSParser: NSObject, XMLParserDelegate {
     var currentPubDate: String = ""
     var currentLink: String = ""
     var currentImgURL: String = ""
+    var currentTag: String = ""
     
     var titles: [String] = []
     var descriptions: [String] = []
@@ -78,7 +79,8 @@ class RSSParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item" {
-            let newsItem = NewsItem(title: currentTitle, date: currentPubDate, content: currentDescription, url: URL(string: currentLink), imageURL: URL(string: currentImgURL), isFavorite: false, tag: "ss")
+            let newsItem = NewsItem(title: currentTitle, date: currentPubDate, content: currentDescription, url: URL(string: currentLink), imageURL: URL(string: currentImgURL), isFavorite: false, tag: filterNewsItemsByTag(title: currentTitle))
+            
             if !dublicateFinder(title: newsItem.title) {
                 modelData.newsItems.append(newsItem)
                 currentTitle = ""
@@ -86,12 +88,14 @@ class RSSParser: NSObject, XMLParserDelegate {
                 currentPubDate = ""
                 currentLink = ""
                 currentImgURL = ""
+                currentTag = ""
             }
             currentTitle = ""
             currentDescription = ""
             currentPubDate = ""
             currentLink = ""
             currentImgURL = ""
+            currentTag = ""
         }
     }
     
@@ -102,6 +106,17 @@ class RSSParser: NSObject, XMLParserDelegate {
     
     func dublicateFinder(title: String) -> Bool {
         return modelData.newsItems.contains { $0.title == title }
+    }
+    
+    func filterNewsItemsByTag(title: String) -> String {
+        if title.lowercased().contains("patch") {
+            return "Patch"
+        } else if title.lowercased().contains("the international") {
+            return "The International"
+        } else {
+            return "News"
+        }
+        
     }
 
 }
