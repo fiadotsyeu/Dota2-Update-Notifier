@@ -52,6 +52,11 @@ class RSSParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         currentElement = elementName
+        if elementName == "item" {
+            // Сбросить текущие значения перед началом нового элемента <item>
+            currentTitle = ""
+            currentDescription = ""
+        }
         if elementName == "enclosure" {
             if let url = attributeDict["url"] {
                 currentImgURL = url
@@ -61,21 +66,27 @@ class RSSParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         if currentElement == "title" {
-            currentTitle += string
+            currentTitle += string.trimmingCharacters(in: .whitespacesAndNewlines)
         } else if currentElement == "description" {
             currentDescription += string
         } else if currentElement == "pubDate" {
-            currentPubDate += string
+            currentPubDate += string.trimmingCharacters(in: .whitespacesAndNewlines)
         } else if currentElement == "guid" {
-            currentLink += string
+            currentLink += string.trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item" {
             let newsItem = NewsItem(title: currentTitle, date: currentPubDate, content: currentDescription, url: URL(string: currentLink), imageURL: URL(string: currentImgURL), isFavorite: false, tag: "ss")
-            
-            modelData.newsItems.append(newsItem)
+            if !dublicateFinder(title: newsItem.title) {
+                modelData.newsItems.append(newsItem)
+                currentTitle = ""
+                currentDescription = ""
+                currentPubDate = ""
+                currentLink = ""
+                currentImgURL = ""
+            }
             currentTitle = ""
             currentDescription = ""
             currentPubDate = ""
@@ -88,6 +99,12 @@ class RSSParser: NSObject, XMLParserDelegate {
         modelData.save()
         print(modelData.newsItems.count)
     }
+    
+    func dublicateFinder(title: String) -> Bool {
+        return modelData.newsItems.contains { $0.title == title }
+    }
+
 }
+
 
 
