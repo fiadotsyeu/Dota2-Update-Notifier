@@ -32,7 +32,7 @@ struct NewsDetail: View {
                 if let newsItemIndex = newsItemIndex {
                     FavoriteButton(isSet: $modelData.newsItems[newsItemIndex].isFavorite)
                 } else {
-                    // Обработка ситуации, когда newsItemIndex равен nil
+                    // Handling the situation when newsItemIndex is nil.
                     Text("News item index is nil")
                 }
             }
@@ -43,7 +43,7 @@ struct NewsDetail: View {
                 if let url = newsItem.url {
                     Link("Go to the link", destination: url)
                 } else {
-                    // Обработка случая, когда url равен nil
+                    // Handling the case when the URL is nil
                     Text("No link available")
                 }
                 Spacer()
@@ -54,10 +54,11 @@ struct NewsDetail: View {
             }
             
             Divider()
-            HTMLView(htmlContent: generateHTMLContent(content: newsItem.content))
+            HTMLView(htmlContent: generateHTMLContent(content: newsItem.content, colorScheme: .dark))
                 .frame(maxWidth: .infinity)
                 .navigationTitle(newsItem.title)
                 .navigationBarTitleDisplayMode(.inline)
+                .foregroundColor(.black)
             Spacer()
         }
         .padding()
@@ -68,6 +69,7 @@ struct NewsDetail: View {
 
 struct HTMLView: UIViewRepresentable {
     let htmlContent: String
+    @Environment(\.colorScheme) var colorScheme
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
@@ -75,12 +77,12 @@ struct HTMLView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        uiView.loadHTMLString(htmlContent, baseURL: nil)
+        uiView.loadHTMLString(generateHTMLContent(content: htmlContent, colorScheme: colorScheme), baseURL: nil)
     }
 }
 
 
-func generateHTMLContent(content: String) -> String {
+func generateHTMLContent(content: String, colorScheme: ColorScheme) -> String {
     var htmlContent = """
     <!DOCTYPE html>
     <html>
@@ -90,6 +92,8 @@ func generateHTMLContent(content: String) -> String {
             body {
                 font-size: 20px;
                 margin: 10px;
+                background-color: \(colorScheme == .dark ? "#333333" : "#ffffff"); /* Changing background color depending on the current theme */
+                color: \(colorScheme == .dark ? "#ffffff" : "#000000"); /* Changing text color depending on the current theme */
             }
             img {
                 max-width: 100%;
