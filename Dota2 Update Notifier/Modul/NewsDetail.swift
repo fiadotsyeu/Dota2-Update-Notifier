@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct NewsDetail: View {
     @Environment(ModelData.self) var modelData
@@ -18,57 +19,94 @@ struct NewsDetail: View {
             return nil
         }
     }
-
     
     var body: some View {
         @Bindable var modelData = modelData
         
-        ScrollView {
-            GeometryReader { geometry in
-                Image("d2HeaderItem")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: geometry.size.width)
-            }
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(newsItem.title)
-                        .font(.title)
-                        .bold()
-                    Spacer()
-                    FavoriteButton(isSet: $modelData.newsItems[newsItemIndex!].isFavorite)
-                }
-                
-                HStack {
-                    Text("URL: ")
-                        .bold()
-                    if let url = newsItem.url {
-                        Link("Go to the link", destination: url)
-                    } else {
-                        // Обработка случая, когда url равен nil
-                        Text("No link available")
-                    }
-                    Spacer()
-                    Text("Date:")
-                        .bold()
-                    Text(newsItem.date)
-                        .font(.subheadline)
-                }
-                
-                Divider()
-                
-                
+        VStack(alignment: .leading) {
+            HStack {
+                Text(newsItem.title)
+                    .font(.title)
+                    .bold()
                 Spacer()
-                Text(newsItem.content)
-                Spacer()
+                if let newsItemIndex = newsItemIndex {
+                    FavoriteButton(isSet: $modelData.newsItems[newsItemIndex].isFavorite)
+                } else {
+                    // Обработка ситуации, когда newsItemIndex равен nil
+                    Text("News item index is nil")
+                }
             }
-            .padding(.top, 140)
             
+            HStack {
+                Text("URL: ")
+                    .bold()
+                if let url = newsItem.url {
+                    Link("Go to the link", destination: url)
+                } else {
+                    // Обработка случая, когда url равен nil
+                    Text("No link available")
+                }
+                Spacer()
+                Text("Date:")
+                    .bold()
+                Text(newsItem.date)
+                    .font(.subheadline)
+            }
+            
+            Divider()
+            HTMLView(htmlContent: generateHTMLContent(content: newsItem.content))
+                .frame(maxWidth: .infinity)
+                .navigationTitle(newsItem.title)
+                .navigationBarTitleDisplayMode(.inline)
+            Spacer()
         }
         .padding()
-        .navigationTitle(newsItem.title)
-        .navigationBarTitleDisplayMode(.inline)
     }
+}
+
+
+
+struct HTMLView: UIViewRepresentable {
+    let htmlContent: String
+    
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        return webView
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        uiView.loadHTMLString(htmlContent, baseURL: nil)
+    }
+}
+
+
+func generateHTMLContent(content: String) -> String {
+    var htmlContent = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-size: 20px;
+                margin: 10px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+    """
+    
+    htmlContent += "<p>\(content)</p>"
+    htmlContent += """
+    </body>
+    </html>
+    """
+    
+    return htmlContent
 }
 
 
