@@ -10,15 +10,14 @@ import SwiftUI
 
 struct NewsRow: View {
     var newsItem: NewsItem
+    @State private var imageURL: URL?
     
     var body: some View {
         VStack(alignment: .trailing) {
-            HStack() {
-                
+            HStack {
                 Text(newsItem.title)
                     .font(.system(size: 23))
                 Spacer()
-                
             }
             HStack {
                 if newsItem.isFavorite {
@@ -34,10 +33,43 @@ struct NewsRow: View {
                 }
                 Spacer()
                 Text(newsItem.date)
-
-                
             }
-            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Group {
+                if let imageURL = imageURL {
+                    AsyncImage(url: imageURL) { phase in
+                        switch phase {
+                        case .empty:
+                            Color.gray // Placeholder color
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                                .opacity(0.1)
+                        case .failure:
+                            Color.red // Error color
+                        @unknown default:
+                            Color.gray // Placeholder color
+                        }
+                    }
+                    .scaledToFill()
+                } else {
+                    Image("d2HeaderItem") // Default background image if imageURL is nil
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                        .opacity(0.1)
+                }
+            }
+        )
+        .frame(height: 100)
+        .onAppear {
+            if let imageURL = newsItem.imageURL {
+                self.imageURL = imageURL
+            }
         }
     }
 }
