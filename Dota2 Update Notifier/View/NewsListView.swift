@@ -10,14 +10,17 @@ import SwiftUI
 struct NewsListView: View {
     @Environment(ModelData.self) var modelData
     @State private var showInternationalOnly = false
-    
+    let rssURL = URL(string: "https://store.steampowered.com/feeds/news/app/570/&l=english&snr=1_2108_9__2107")!
+        
     var filteredNewsItems: [NewsItem] {
         modelData.newsItems.filter { newsItem in
             (!showInternationalOnly || newsItem.tag.contains("international"))
         }
     }
-    
+        
     var body: some View {
+        let _rssParser = RSSParser(modelData: modelData)
+        
         NavigationView {
             List {
                 Section(header: Text("All news and patches")) {
