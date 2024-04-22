@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7C64C52BD635FC0066ACCC /* FavoritsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */; };
+		CE7C64C62BD635FC0066ACCC /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C22BD635FC0066ACCC /* NewsListView.swift */; };
+		CE7C64C72BD635FC0066ACCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C32BD635FC0066ACCC /* SettingsView.swift */; };
+		CE7C64C82BD635FC0066ACCC /* PatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C42BD635FC0066ACCC /* PatchesView.swift */; };
+		CE7C64CD2BD636940066ACCC /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64CC2BD636940066ACCC /* RSSParser.swift */; };
 		CE878E742BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878E732BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift */; };
 		CE878E762BCBB3F7008CD92F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878E752BCBB3F7008CD92F /* ContentView.swift */; };
 		CE878E782BCBB3FA008CD92F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE878E772BCBB3FA008CD92F /* Assets.xcassets */; };
@@ -17,10 +22,8 @@
 		CE878EA22BCBB4F7008CD92F /* modelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EA12BCBB4F7008CD92F /* modelData.swift */; };
 		CE878EA42BCBB4FF008CD92F /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EA32BCBB4FF008CD92F /* NewsItem.swift */; };
 		CE878EAB2BCBB51F008CD92F /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EA72BCBB51E008CD92F /* NewsDetail.swift */; };
-		CE878EAC2BCBB51F008CD92F /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EA82BCBB51E008CD92F /* NewsList.swift */; };
 		CE878EAD2BCBB51F008CD92F /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EA92BCBB51F008CD92F /* NewsRow.swift */; };
 		CE878EAE2BCBB51F008CD92F /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EAA2BCBB51F008CD92F /* FavoriteButton.swift */; };
-		CE878EB12BCBB53B008CD92F /* newsItemData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE878EB02BCBB53B008CD92F /* newsItemData.json */; };
 		CE878EB72BCBB5C3008CD92F /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878EB62BCBB5C3008CD92F /* NavBarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritsView.swift; sourceTree = "<group>"; };
+		CE7C64C22BD635FC0066ACCC /* NewsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
+		CE7C64C32BD635FC0066ACCC /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CE7C64C42BD635FC0066ACCC /* PatchesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatchesView.swift; sourceTree = "<group>"; };
+		CE7C64CC2BD636940066ACCC /* RSSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
 		CE878E702BCBB3F7008CD92F /* Dota2 Update Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dota2 Update Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE878E732BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierApp.swift; sourceTree = "<group>"; };
 		CE878E752BCBB3F7008CD92F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,10 +63,8 @@
 		CE878EA12BCBB4F7008CD92F /* modelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = modelData.swift; sourceTree = "<group>"; };
 		CE878EA32BCBB4FF008CD92F /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		CE878EA72BCBB51E008CD92F /* NewsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetail.swift; sourceTree = "<group>"; };
-		CE878EA82BCBB51E008CD92F /* NewsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
 		CE878EA92BCBB51F008CD92F /* NewsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRow.swift; sourceTree = "<group>"; };
 		CE878EAA2BCBB51F008CD92F /* FavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
-		CE878EB02BCBB53B008CD92F /* newsItemData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsItemData.json; sourceTree = "<group>"; };
 		CE878EB62BCBB5C3008CD92F /* NavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE7C64CB2BD636700066ACCC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CE7C64CC2BD636940066ACCC /* RSSParser.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		CE878E672BCBB3F7008CD92F = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +124,8 @@
 		CE878E722BCBB3F7008CD92F /* Dota2 Update Notifier */ = {
 			isa = PBXGroup;
 			children = (
+				CE7C64CB2BD636700066ACCC /* Service */,
 				CE878EB32BCBB572008CD92F /* View */,
-				CE878EAF2BCBB528008CD92F /* Resources */,
 				CE878EA62BCBB511008CD92F /* Modul */,
 				CE878EA02BCBB4E9008CD92F /* Model */,
 				CE878E732BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift */,
@@ -161,23 +175,18 @@
 			children = (
 				CE878EAA2BCBB51F008CD92F /* FavoriteButton.swift */,
 				CE878EA72BCBB51E008CD92F /* NewsDetail.swift */,
-				CE878EA82BCBB51E008CD92F /* NewsList.swift */,
 				CE878EA92BCBB51F008CD92F /* NewsRow.swift */,
 			);
 			path = Modul;
 			sourceTree = "<group>";
 		};
-		CE878EAF2BCBB528008CD92F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CE878EB02BCBB53B008CD92F /* newsItemData.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		CE878EB32BCBB572008CD92F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */,
+				CE7C64C22BD635FC0066ACCC /* NewsListView.swift */,
+				CE7C64C42BD635FC0066ACCC /* PatchesView.swift */,
+				CE7C64C32BD635FC0066ACCC /* SettingsView.swift */,
 				CE878EB62BCBB5C3008CD92F /* NavBarView.swift */,
 			);
 			path = View;
@@ -288,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE878E7B2BCBB3FA008CD92F /* Preview Assets.xcassets in Resources */,
-				CE878EB12BCBB53B008CD92F /* newsItemData.json in Resources */,
 				CE878E782BCBB3FA008CD92F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,15 +322,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE878EAC2BCBB51F008CD92F /* NewsList.swift in Sources */,
 				CE878E762BCBB3F7008CD92F /* ContentView.swift in Sources */,
 				CE878EA42BCBB4FF008CD92F /* NewsItem.swift in Sources */,
+				CE7C64C52BD635FC0066ACCC /* FavoritsView.swift in Sources */,
+				CE7C64CD2BD636940066ACCC /* RSSParser.swift in Sources */,
+				CE7C64C82BD635FC0066ACCC /* PatchesView.swift in Sources */,
 				CE878EAE2BCBB51F008CD92F /* FavoriteButton.swift in Sources */,
 				CE878EB72BCBB5C3008CD92F /* NavBarView.swift in Sources */,
 				CE878E742BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift in Sources */,
 				CE878EAB2BCBB51F008CD92F /* NewsDetail.swift in Sources */,
+				CE7C64C62BD635FC0066ACCC /* NewsListView.swift in Sources */,
 				CE878EAD2BCBB51F008CD92F /* NewsRow.swift in Sources */,
 				CE878EA22BCBB4F7008CD92F /* modelData.swift in Sources */,
+				CE7C64C72BD635FC0066ACCC /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -468,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
