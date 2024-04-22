@@ -28,7 +28,7 @@ struct NewsListView: View {
 
 
     var body: some View {
-        let _rssParser = RSSParser(modelData: modelData)
+        let rssParser = RSSParser(modelData: modelData)
         
         NavigationView {
             List {
@@ -50,6 +50,9 @@ struct NewsListView: View {
             }
             .animation(.default, value: selectedOptionFilter)
             .navigationTitle("Dota Updates Notifier")
+            .refreshable {
+                rssParser.parseRSS(from: rssURL)
+            }
         }
     }
 }
