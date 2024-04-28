@@ -9,14 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(ModelData.self) var modelData
-    let rssURL = URL(string: "https://store.steampowered.com/feeds/news/app/570/?cc=CZ&l=english&snr=1_2108_9__2107")!
+    let rssURLs = [URL(string: "https://www.dotabuff.com/blog.rss"), 
+                   URL(string: "https://store.steampowered.com/feeds/news/app/570/l=english")]
     
     var body: some View {
         let rssParser = RSSParser(modelData: modelData)
         
         NavBarView()
             .onAppear {
-                rssParser.parseRSS(from: rssURL)
+                rssURLs.forEach { url in
+                    rssParser.parseRSS(from: url!)
+                }
             }
     }
 }
