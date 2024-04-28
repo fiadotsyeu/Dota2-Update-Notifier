@@ -10,7 +10,6 @@
 		CE7C64C52BD635FC0066ACCC /* FavoritsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */; };
 		CE7C64C62BD635FC0066ACCC /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C22BD635FC0066ACCC /* NewsListView.swift */; };
 		CE7C64C72BD635FC0066ACCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C32BD635FC0066ACCC /* SettingsView.swift */; };
-		CE7C64C82BD635FC0066ACCC /* PatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C42BD635FC0066ACCC /* PatchesView.swift */; };
 		CE7C64CD2BD636940066ACCC /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64CC2BD636940066ACCC /* RSSParser.swift */; };
 		CE878E742BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878E732BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift */; };
 		CE878E762BCBB3F7008CD92F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE878E752BCBB3F7008CD92F /* ContentView.swift */; };
@@ -48,7 +47,6 @@
 		CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritsView.swift; sourceTree = "<group>"; };
 		CE7C64C22BD635FC0066ACCC /* NewsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
 		CE7C64C32BD635FC0066ACCC /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		CE7C64C42BD635FC0066ACCC /* PatchesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatchesView.swift; sourceTree = "<group>"; };
 		CE7C64CC2BD636940066ACCC /* RSSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
 		CE878E702BCBB3F7008CD92F /* Dota2 Update Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dota2 Update Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE878E732BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2_Update_NotifierApp.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 			children = (
 				CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */,
 				CE7C64C22BD635FC0066ACCC /* NewsListView.swift */,
-				CE7C64C42BD635FC0066ACCC /* PatchesView.swift */,
 				CE7C64C32BD635FC0066ACCC /* SettingsView.swift */,
 				CE878EB62BCBB5C3008CD92F /* NavBarView.swift */,
 			);
@@ -326,7 +323,6 @@
 				CE878EA42BCBB4FF008CD92F /* NewsItem.swift in Sources */,
 				CE7C64C52BD635FC0066ACCC /* FavoritsView.swift in Sources */,
 				CE7C64CD2BD636940066ACCC /* RSSParser.swift in Sources */,
-				CE7C64C82BD635FC0066ACCC /* PatchesView.swift in Sources */,
 				CE878EAE2BCBB51F008CD92F /* FavoriteButton.swift in Sources */,
 				CE878EB72BCBB5C3008CD92F /* NavBarView.swift in Sources */,
 				CE878E742BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift in Sources */,

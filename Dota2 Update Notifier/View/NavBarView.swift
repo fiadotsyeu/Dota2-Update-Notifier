@@ -10,7 +10,7 @@ import SwiftUI
 struct NavBarView: View {
     @State var selectTab = "News"
     
-    let tabs = ["News", "Patches", "Favorites", "Settings"]
+    let tabs = ["News", "Favorites", "Settings"]
     
     init() {
         UITabBar.appearance().isHidden = true
@@ -21,8 +21,6 @@ struct NavBarView: View {
             TabView(selection: $selectTab) {
                 NewsListView()
                     .tag("News")
-                PatchesView()
-                    .tag("Patches")
                 FavoritsView()
                     .tag("Favorites")
                 SettingsView()
