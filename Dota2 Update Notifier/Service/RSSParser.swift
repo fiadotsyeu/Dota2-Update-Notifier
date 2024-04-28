@@ -74,6 +74,8 @@ class RSSParser: NSObject, XMLParserDelegate {
             currentPubDate += string.trimmingCharacters(in: .whitespacesAndNewlines)
         } else if currentElement == "guid" {
             currentLink += string.trimmingCharacters(in: .whitespacesAndNewlines)
+        } else if currentElement == "dotabuff:image" {
+            currentImgURL += string.trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
     
