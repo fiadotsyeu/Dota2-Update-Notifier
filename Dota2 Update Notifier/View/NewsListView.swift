@@ -14,16 +14,30 @@ struct NewsListView: View {
     let rssURL = URL(string: "https://store.steampowered.com/feeds/news/app/570/&l=english&snr=1_2108_9__2107")!
         
     func applyFilter(filteredBy: Int) -> [NewsItem] {
+        var sortedItems: [NewsItem]
+        
         switch filteredBy {
         case 0:
-            return modelData.newsItems // Returning all news without filtering
+            sortedItems = modelData.newsItems // Returning all news without filtering
         case 1:
-            return modelData.newsItems.filter { $0.tag.contains("News") }
+            sortedItems = modelData.newsItems.filter { $0.tag.contains("News") }
         case 2:
-            return modelData.newsItems.filter { $0.tag.contains("Patch") }
+            sortedItems = modelData.newsItems.filter { $0.tag.contains("Patch") }
         default:
-            return modelData.newsItems.filter { $0.tag.contains("The International") }
+            sortedItems = modelData.newsItems.filter { $0.tag.contains("The International") }
         }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy, HH:mm"
+        
+        sortedItems.sort { (item1, item2) -> Bool in
+            if let date1 = dateFormatter.date(from: item1.date), let date2 = dateFormatter.date(from: item2.date) {
+                return date1 > date2
+            } else {
+                return false // Handle invalid dates if necessary
+            }
+        }
+        return sortedItems
     }
 
 
