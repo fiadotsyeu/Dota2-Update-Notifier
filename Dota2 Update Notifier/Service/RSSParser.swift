@@ -79,7 +79,7 @@ class RSSParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item" {
-            let newsItem = NewsItem(title: currentTitle, date: currentPubDate, content: currentDescription, url: URL(string: currentLink), imageURL: URL(string: currentImgURL), isFavorite: false, tag: filterNewsItemsByTag(title: currentTitle))
+            let newsItem = NewsItem(title: currentTitle, date: formatDate(currentPubDate)!, content: currentDescription, url: URL(string: currentLink), imageURL: URL(string: currentImgURL), isFavorite: false, tag: filterNewsItemsByTag(title: currentTitle))
             
             if !dublicateFinder(title: newsItem.title) {
                 modelData.newsItems.append(newsItem)
@@ -116,7 +116,18 @@ class RSSParser: NSObject, XMLParserDelegate {
         } else {
             return "News"
         }
+    }
+    
+    func formatDate(_ dateString: String) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
         
+        if let date = dateFormatter.date(from: dateString) {
+            dateFormatter.dateFormat = "dd MMMM yyyy, HH:mm"
+            return dateFormatter.string(from: date)
+        } else {
+            return nil
+        }
     }
 
 }
