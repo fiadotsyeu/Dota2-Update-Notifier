@@ -11,7 +11,8 @@ struct NewsListView: View {
     @Environment(ModelData.self) var modelData
     @State private var selectedOptionFilter = 0
     
-    let rssURL = URL(string: "https://store.steampowered.com/feeds/news/app/570/&l=english&snr=1_2108_9__2107")!
+    let rssURLs = [URL(string: "https://www.dotabuff.com/blog.rss"),
+                   URL(string: "https://store.steampowered.com/feeds/news/app/570/l=english")]
         
     func applyFilter(filteredBy: Int) -> [NewsItem] {
         var sortedItems: [NewsItem]
@@ -65,7 +66,9 @@ struct NewsListView: View {
             .animation(.default, value: selectedOptionFilter)
             .navigationTitle("Dota Updates Notifier")
             .refreshable {
-                rssParser.parseRSS(from: rssURL)
+                rssURLs.forEach { url in
+                    rssParser.parseRSS(from: url!)
+                }
             }
         }
     }
