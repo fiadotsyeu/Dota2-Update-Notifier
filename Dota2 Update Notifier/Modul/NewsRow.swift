@@ -47,7 +47,7 @@ struct NewsRow: View {
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                                .frame(width: UIScreen.main.bounds.width, height: .leastNonzeroMagnitude)
                                 .opacity(0.1)
                         case .failure:
                             Color.red // Error color
