@@ -54,7 +54,7 @@ struct NewsDetail: View {
             }
             
             Divider()
-            HTMLView(htmlContent: generateHTMLContent(content: newsItem.content, colorScheme: .dark))
+            HTMLView(htmlContent: generateHTMLContent(content: newsItem.content, colorScheme: .light))
                 .frame(maxWidth: .infinity)
                 .navigationTitle(newsItem.title)
                 .navigationBarTitleDisplayMode(.inline)
@@ -70,14 +70,42 @@ struct NewsDetail: View {
 struct HTMLView: UIViewRepresentable {
     let htmlContent: String
     @Environment(\.colorScheme) var colorScheme
-    
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
+        webView.navigationDelegate = context.coordinator
         return webView
     }
-    
+
     func updateUIView(_ uiView: WKWebView, context: Context) {
         uiView.loadHTMLString(generateHTMLContent(content: htmlContent, colorScheme: colorScheme), baseURL: nil)
+    }
+
+    class Coordinator: NSObject, WKNavigationDelegate {
+        var parent: HTMLView
+
+        init(_ parent: HTMLView) {
+            self.parent = parent
+        }
+
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            guard let url = navigationAction.request.url else {
+                decisionHandler(.allow)
+                return
+            }
+
+            // Открывать ссылки во внешнем браузере
+            if navigationAction.navigationType == .linkActivated {
+                UIApplication.shared.open(url)
+                decisionHandler(.cancel)
+            } else {
+                decisionHandler(.allow)
+            }
+        }
     }
 }
 
@@ -99,19 +127,24 @@ func generateHTMLContent(content: String, colorScheme: ColorScheme) -> String {
                 max-width: 100%;
                 height: auto;
             }
+            a {
+                color: \(colorScheme == .dark ? "#ffffff" : "#000000"); /* Цвет ссылки */
+                text-decoration: underline; /* Подчеркивание для ссылок */
+            }
         </style>
     </head>
     <body>
     """
-    
+
     htmlContent += "<p>\(content)</p>"
     htmlContent += """
     </body>
     </html>
     """
-    
+
     return htmlContent
 }
+
 
 
 #Preview {
