@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8109FAF62BE0B80900F342A6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8109FAF52BE0B80900F342A6 /* README.md */; };
+		8109FAFB2BE0BC2B00F342A6 /* logo_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 8109FAF92BE0BC2B00F342A6 /* logo_light.png */; };
+		8109FAFC2BE0BC2B00F342A6 /* logo_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8109FAFA2BE0BC2B00F342A6 /* logo_dark.png */; };
 		CE7C64C52BD635FC0066ACCC /* FavoritsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */; };
 		CE7C64C62BD635FC0066ACCC /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C22BD635FC0066ACCC /* NewsListView.swift */; };
 		CE7C64C72BD635FC0066ACCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C32BD635FC0066ACCC /* SettingsView.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8109FAF52BE0B80900F342A6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.markdown; };
+		8109FAF92BE0BC2B00F342A6 /* logo_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_light.png; path = ../Downloads/logo_light.png; sourceTree = "<group>"; };
+		8109FAFA2BE0BC2B00F342A6 /* logo_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_dark.png; path = ../Downloads/logo_dark.png; sourceTree = "<group>"; };
 		CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritsView.swift; sourceTree = "<group>"; };
 		CE7C64C22BD635FC0066ACCC /* NewsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
 		CE7C64C32BD635FC0066ACCC /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -102,6 +108,9 @@
 		CE878E672BCBB3F7008CD92F = {
 			isa = PBXGroup;
 			children = (
+				8109FAFA2BE0BC2B00F342A6 /* logo_dark.png */,
+				8109FAF92BE0BC2B00F342A6 /* logo_light.png */,
+				8109FAF52BE0B80900F342A6 /* README.md */,
 				CE878E722BCBB3F7008CD92F /* Dota2 Update Notifier */,
 				CE878E832BCBB3FA008CD92F /* Dota2 Update NotifierTests */,
 				CE878E8D2BCBB3FB008CD92F /* Dota2 Update NotifierUITests */,
@@ -293,7 +302,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8109FAF62BE0B80900F342A6 /* README.md in Resources */,
+				8109FAFB2BE0BC2B00F342A6 /* logo_light.png in Resources */,
 				CE878E7B2BCBB3FA008CD92F /* Preview Assets.xcassets in Resources */,
+				8109FAFC2BE0BC2B00F342A6 /* logo_dark.png in Resources */,
 				CE878E782BCBB3FA008CD92F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
