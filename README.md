@@ -1,7 +1,7 @@
-<picture align="center">
+<p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="logo_dark.png">
   <img alt="A single image caption for both variants" src="logo_light.png">
-</picture>
+</picture></p>
 
 ### **Description:**
 Welcome to the Dota2 News and Updates app, built with Swift! This app is designed to keep Dota2 enthusiasts up-to-date with the latest news, updates, and professional gaming statistics. Whether you're a seasoned player or just starting out, this app has something for you.
