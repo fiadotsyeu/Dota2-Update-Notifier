@@ -16,20 +16,18 @@ class ModelData: ObservableObject {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let fileURL = documentsDirectory.appendingPathComponent("newsItemData.json")
         
-        // Проверяем, существует ли файл
+        // Checking if the file exists.
         if FileManager.default.fileExists(atPath: fileURL.path) {
-            // Если файл существует, загружаем данные из него
+            // If the file exists, we load data from it.
             self.newsItems = load(fileURL)
         } else {
-            // Если файл не существует, создаем новый файл и устанавливаем массив данных в пустой массив
+            // If the file does not exist, we create a new file with an empty array.
             self.newsItems = []
             if createFile(at: fileURL) {
-                // Если файл успешно создан, выводим сообщение об этом
-                print("Файл newsItemData.json успешно создан.")
+                print("The newsItemData.json file has been successfully created.")
                 self.newsItems = load(fileURL)
             } else {
-                // Если возникла ошибка при создании файла, выводим сообщение об этом
-                print("Ошибка при создании файла newsItemData.json.")
+                print("Error creating the newsItemData.json file.")
             }
         }
     }
@@ -37,13 +35,13 @@ class ModelData: ObservableObject {
     
     private func createFile(at url: URL) -> Bool {
             do {
-                let defaultData = Data() // Создаем пустые данные
-                try defaultData.write(to: url) // Записываем пустые данные в файл
-                print("новый файл создан \(url)")
+                let defaultData = Data() // Creating empty data.
+                try defaultData.write(to: url) // Writing empty data to the file.
+                print("A new file has been created \(url)")
                 self.newsItems = load(url)
                 return true
             } catch {
-                print("Ошибка при создании файла: \(error)")
+                print("Error creating the file: \(error)")
                 return false
             }
         }
@@ -54,19 +52,19 @@ class ModelData: ObservableObject {
             encoder.outputFormatting = .prettyPrinted
             let jsonData = try encoder.encode(newsItems)
             
-            // Получаем путь к директории Documents внутри домашней директории пользователя
+            // Getting the path to the Documents directory inside the user's home directory
             if let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
                 let fileURL = documentsDirectory.appendingPathComponent("newsItemData.json")
                 try jsonData.write(to: fileURL)
                 
-                // После сохранения данных, загружаем их обратно в newsItems
+                // After saving the data, we load it back into newsItems
                 self.newsItems = load(fileURL)
-                print("Данные успешно сохранены в файл: \(fileURL)")
+                print("The data has been successfully saved to the file \(fileURL)")
             } else {
-                print("Не удалось получить доступ к директории Documents")
+                print("Failed to access the Documents directory.")
             }
         } catch {
-            print("Ошибка при сохранении данных: \(error)")
+            print("Error saving data: \(error)")
         }
     }
     
@@ -76,10 +74,10 @@ class ModelData: ObservableObject {
         let url = documentsDirectory.appendingPathComponent("newsItemData.json")
         do {
             try FileManager.default.removeItem(at: url)
-            print("данные удалены")
+            print("The data has been deleted.")
             return true
         } catch {
-            print("Ошибка при удалении файла: \(error)")
+            print("Error deleting the file: \(error)")
             return false
         }
     }
@@ -88,17 +86,17 @@ class ModelData: ObservableObject {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let url = documentsDirectory.appendingPathComponent("newsItemData.json")
         
-        // Создаем пустые данные
+        // Creating empty data.
         let emptyData = Data()
         
         do {
-            // Пишем пустые данные в файл, перезаписывая его содержимое
+            // Writing empty data to the file, overwriting its contents
             try emptyData.write(to: url)
-            print("Данные в файле успешно стерты")
+            print("The data in the file has been successfully cleared.")
             self.newsItems = load(url)
             return true
         } catch {
-            print("Ошибка при стирании данных в файле: \(error)")
+            print("Error clearing data in the file: \(error)")
             return false
         }
     }
@@ -106,14 +104,14 @@ class ModelData: ObservableObject {
 }
 
 private func load(_ fileURL: URL) -> [NewsItem] {
-        do {
-            let jsonData = try Data(contentsOf: fileURL)
-            let decoder = JSONDecoder()
-            let newsItems = try decoder.decode([NewsItem].self, from: jsonData)
-            return newsItems
-        } catch {
-            print("Ошибка при загрузке данных: \(error)")
-            print("file url: \(fileURL)")
-            return []
-        }
+    do {
+        let jsonData = try Data(contentsOf: fileURL)
+        let decoder = JSONDecoder()
+        let newsItems = try decoder.decode([NewsItem].self, from: jsonData)
+        return newsItems
+    } catch {
+        print("Error loading data: \(error)")
+        print("file url: \(fileURL)")
+        return []
     }
+}
