@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class RSSParser: NSObject, XMLParserDelegate {
     var parser: XMLParser?
@@ -54,7 +55,7 @@ class RSSParser: NSObject, XMLParserDelegate {
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         currentElement = elementName
         if elementName == "item" {
-            // Сбросить текущие значения перед началом нового элемента <item>
+            // Reset current values before starting a new <item> element.
             currentTitle = ""
             currentDescription = ""
         }
@@ -115,6 +116,8 @@ class RSSParser: NSObject, XMLParserDelegate {
             return "Patch"
         } else if title.lowercased().contains("the international") {
             return "The International"
+        } else if title.lowercased().contains("update") {
+            return "Update"
         } else {
             return "News"
         }

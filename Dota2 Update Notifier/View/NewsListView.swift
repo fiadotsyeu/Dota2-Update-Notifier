@@ -24,6 +24,8 @@ struct NewsListView: View {
             sortedItems = modelData.newsItems.filter { $0.tag.contains("News") }
         case 2:
             sortedItems = modelData.newsItems.filter { $0.tag.contains("Patch") }
+        case 3:
+            sortedItems = modelData.newsItems.filter { $0.tag.contains("Update") }
         default:
             sortedItems = modelData.newsItems.filter { $0.tag.contains("The International") }
         }
@@ -52,7 +54,8 @@ struct NewsListView: View {
                         Text("All").tag(0)
                         Text("News").tag(1)
                         Text("Patches").tag(2)
-                        Text("The International").tag(3)
+                        Text("Updates").tag(3)
+                        Text("The International").tag(4)
                     }
                     .pickerStyle(DefaultPickerStyle())
                     

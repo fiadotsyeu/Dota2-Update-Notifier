@@ -10,11 +10,11 @@ import UserNotifications
 
 class Notifier {
     var modelData = ModelData()
-    var count = 0
+    var count = CountNewsItems().count
     
     func isNewsListExpanded(countNewsItems: Int) {
         if count < modelData.newsItems.count {
-            var lastNewsItem = modelData.newsItems[5]
+            let lastNewsItem = modelData.newsItems[0]
             
             let content = UNMutableNotificationContent()
             content.title = lastNewsItem.title
@@ -25,6 +25,8 @@ class Notifier {
                 content.body = "New information about The International is here! Check it out!"
             case "Patch":
                 content.body = "New patch available! Check out what's changed!"
+            case "Update":
+                content.body = "New updates are already waiting for you! Check them out!"
             default:
                 content.body = "The latest news are already in your app. Be the first to know."
             }
