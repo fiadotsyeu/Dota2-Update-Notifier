@@ -30,7 +30,7 @@ class RSSParser: NSObject, XMLParserDelegate {
         self.modelData = modelData
     }
     
-    func parseRSS(from url: URL) {
+    func parseRSS(from url: URL) async {
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let self = self else { return }
             
