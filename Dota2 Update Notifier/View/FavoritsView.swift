@@ -13,7 +13,7 @@ struct FavoritsView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Favorite patches and news")) {
+                Section(header: Text(LocalizedStringKey("Favorite publications"))) {
                     ForEach(modelData.newsItems) { newsItem in
                         if newsItem.isFavorite {
                             NavigationLink(destination: NewsDetail(newsItem: newsItem)) {
@@ -23,7 +23,7 @@ struct FavoritsView: View {
                     }
                 }
             }
-            .navigationTitle("Favorites")
+            .navigationTitle(LocalizedStringKey("Favorites"))
         }
     }
 }

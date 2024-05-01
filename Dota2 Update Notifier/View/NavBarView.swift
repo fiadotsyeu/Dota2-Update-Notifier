@@ -69,7 +69,7 @@ struct NavBarItem: View {
                             .colorMultiply(.black)
                     }
                     if selected == tab {
-                        Text(tab)
+                        Text(LocalizedStringKey(tab))
                             .foregroundColor(.black)
                     }
                 

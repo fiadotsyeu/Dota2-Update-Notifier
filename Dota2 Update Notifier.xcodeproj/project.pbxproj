@@ -10,6 +10,9 @@
 		8109FAF62BE0B80900F342A6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8109FAF52BE0B80900F342A6 /* README.md */; };
 		8109FB062BE0CA3800F342A6 /* logo_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 8109FB052BE0CA3800F342A6 /* logo_light.png */; };
 		8109FB082BE0CA3F00F342A6 /* logo_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8109FB072BE0CA3F00F342A6 /* logo_dark.png */; };
+		8109FB0C2BE0E63800F342A6 /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109FB0B2BE0E63800F342A6 /* Notifier.swift */; };
+		8109FB0E2BE1340A00F342A6 /* Dota2-Update-Notifier-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8109FB0D2BE132DB00F342A6 /* Dota2-Update-Notifier-Info.plist */; };
+		81CD55492BE246390024D35B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81CD55472BE246390024D35B /* Localizable.strings */; };
 		CE7C64C52BD635FC0066ACCC /* FavoritsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */; };
 		CE7C64C62BD635FC0066ACCC /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C22BD635FC0066ACCC /* NewsListView.swift */; };
 		CE7C64C72BD635FC0066ACCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C32BD635FC0066ACCC /* SettingsView.swift */; };
@@ -50,6 +53,12 @@
 		8109FAF52BE0B80900F342A6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.markdown; };
 		8109FB052BE0CA3800F342A6 /* logo_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_light.png; sourceTree = "<group>"; };
 		8109FB072BE0CA3F00F342A6 /* logo_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_dark.png; sourceTree = "<group>"; };
+		8109FB0B2BE0E63800F342A6 /* Notifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
+		8109FB0D2BE132DB00F342A6 /* Dota2-Update-Notifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Dota2-Update-Notifier-Info.plist"; sourceTree = SOURCE_ROOT; };
+		81CD55482BE246390024D35B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		81CD554A2BE2469D0024D35B /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		81CD554B2BE2469E0024D35B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		81CD554C2BE2469E0024D35B /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritsView.swift; sourceTree = "<group>"; };
 		CE7C64C22BD635FC0066ACCC /* NewsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
 		CE7C64C32BD635FC0066ACCC /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -101,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7C64CC2BD636940066ACCC /* RSSParser.swift */,
+				8109FB0B2BE0E63800F342A6 /* Notifier.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -131,6 +141,7 @@
 		CE878E722BCBB3F7008CD92F /* Dota2 Update Notifier */ = {
 			isa = PBXGroup;
 			children = (
+				8109FB0D2BE132DB00F342A6 /* Dota2-Update-Notifier-Info.plist */,
 				CE7C64CB2BD636700066ACCC /* Service */,
 				CE878EB32BCBB572008CD92F /* View */,
 				CE878EA62BCBB511008CD92F /* Modul */,
@@ -139,6 +150,7 @@
 				CE878E752BCBB3F7008CD92F /* ContentView.swift */,
 				CE878E772BCBB3FA008CD92F /* Assets.xcassets */,
 				CE878E792BCBB3FA008CD92F /* Preview Content */,
+				81CD55472BE246390024D35B /* Localizable.strings */,
 			);
 			path = "Dota2 Update Notifier";
 			sourceTree = "<group>";
@@ -284,6 +296,9 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
+				uk,
+				ru,
 			);
 			mainGroup = CE878E672BCBB3F7008CD92F;
 			productRefGroup = CE878E712BCBB3F7008CD92F /* Products */;
@@ -302,8 +317,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8109FB0E2BE1340A00F342A6 /* Dota2-Update-Notifier-Info.plist in Resources */,
 				8109FAF62BE0B80900F342A6 /* README.md in Resources */,
 				8109FB082BE0CA3F00F342A6 /* logo_dark.png in Resources */,
+				81CD55492BE246390024D35B /* Localizable.strings in Resources */,
 				8109FB062BE0CA3800F342A6 /* logo_light.png in Resources */,
 				CE878E7B2BCBB3FA008CD92F /* Preview Assets.xcassets in Resources */,
 				CE878E782BCBB3FA008CD92F /* Assets.xcassets in Resources */,
@@ -335,6 +352,7 @@
 				CE878EA42BCBB4FF008CD92F /* NewsItem.swift in Sources */,
 				CE7C64C52BD635FC0066ACCC /* FavoritsView.swift in Sources */,
 				CE7C64CD2BD636940066ACCC /* RSSParser.swift in Sources */,
+				8109FB0C2BE0E63800F342A6 /* Notifier.swift in Sources */,
 				CE878EAE2BCBB51F008CD92F /* FavoriteButton.swift in Sources */,
 				CE878EB72BCBB5C3008CD92F /* NavBarView.swift in Sources */,
 				CE878E742BCBB3F7008CD92F /* Dota2_Update_NotifierApp.swift in Sources */,
@@ -377,6 +395,20 @@
 			targetProxy = CE878E8B2BCBB3FB008CD92F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		81CD55472BE246390024D35B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81CD55482BE246390024D35B /* en */,
+				81CD554A2BE2469D0024D35B /* cs */,
+				81CD554B2BE2469E0024D35B /* ru */,
+				81CD554C2BE2469E0024D35B /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE878E922BCBB3FB008CD92F /* Debug */ = {
@@ -503,17 +535,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dota2 Update Notifier/Preview Content\"";
-				DEVELOPMENT_TEAM = 467Y563ZU5;
+				DEVELOPMENT_TEAM = NNNJY99L2R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dota2-Update-Notifier-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,6 +557,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DreF.Dota2-Update-Notifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -532,17 +569,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dota2 Update Notifier/Preview Content\"";
-				DEVELOPMENT_TEAM = 467Y563ZU5;
+				DEVELOPMENT_TEAM = NNNJY99L2R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dota2-Update-Notifier-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,6 +591,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DreF.Dota2-Update-Notifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -5,3 +5,29 @@
   Created by Andrei Fiadotsyeu on 01.05.2024.
   
 */
+
+// FavoritsView
+"Favorite publications" = "Oblíbené příspěvky";
+"Favorites" = "Oblíbené";
+
+// NewsListView
+"All news and patches" = "Všechny zprávy a opravy";
+"Select a filter" = "Vybrat filtr";
+"All" = "Všechno";
+
+// SettingsView
+"Notifications" = "Oznámení";
+"News" = "Noviny";
+"Patches" = "Patche";
+"Updates" = "Aktualizace";
+"The International" = "The International";
+"Appearance" = "Vzhled";
+"Dark Mode" = "Tmavý režim";
+"Language" = "Jazyk";
+"Select a language" = "Vyberte jazyk";
+"Settings" = "Nastavení";
+
+// NewsDetail
+"Go to the link" = "Jít na odkaz";
+"No link available" = "Odkaz není k dispozici";
+"Date:" = "Datum:";

@@ -5,3 +5,29 @@
   Created by Andrei Fiadotsyeu on 01.05.2024.
   
 */
+
+// FavoritsView
+"Favorite publications" = "Favorite publications";
+"Favorites" = "Favorites";
+
+// NewsListView
+"All news and patches" = "All news and patches";
+"Select a filter" = "Select a filter";
+"All" = "All";
+
+// SettingsView
+"Notifications" = "Notifications";
+"News" = "News";
+"Patches" = "Patches";
+"Updates" = "Updates";
+"The International" = "The International";
+"Appearance" = "Appearance";
+"Dark Mode" = "Dark Mode";
+"Language" = "Language";
+"Select a language" = "Select a language";
+"Settings" = "Settings";
+
+// NewsDetail
+"Go to the link" = "Go to the link";
+"No link available" = "No link available";
+"Date:" = "Date:";

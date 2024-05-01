@@ -5,3 +5,29 @@
   Created by Andrei Fiadotsyeu on 01.05.2024.
   
 */
+
+// FavoritsView
+"Favorite publications" = "Ізбрані публікації";
+"Favorites" = "Вибрані";
+
+// NewsListView
+"All news and patches" = "Усі новини та патчі";
+"Select a filter" = "Виберіть фільтр";
+"All" = "Все";
+
+// SettingsView
+"Notifications" = "Сповіщення";
+"News" = "Новини";
+"Patches" = "Патчі";
+"Updates" = "Оновлення";
+"The International" = "The International";
+"Appearance" = "Зовнішній вигляд";
+"Dark Mode" = "Темний режим";
+"Language" = "Мова";
+"Select a language" = "Вибрати мову";
+"Settings" = "Налаштування";
+
+// NewsDetail
+"Go to the link" = "Перейти за посиланням";
+"No link available" = "Посилання відсутнє";
+"Date:" = "Дата:";

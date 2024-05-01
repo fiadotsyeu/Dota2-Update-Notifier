@@ -42,10 +42,10 @@ struct NewsDetail: View {
                 Text("URL: ")
                     .bold()
                 if let url = newsItem.url {
-                    Link("Go to the link", destination: url)
+                    Link(LocalizedStringKey("Go to the link"), destination: url)
                 } else {
                     // Handling the case when the URL is nil
-                    Text("No link available")
+                    Text(LocalizedStringKey("No link available"))
                 }
                 Spacer()
                 Text("Date:")

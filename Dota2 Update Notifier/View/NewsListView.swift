@@ -49,8 +49,8 @@ struct NewsListView: View {
         
         NavigationView {
             List {
-                Section(header: Text("All news and patches")) {
-                    Picker(selection: $selectedOptionFilter, label: Text("Select a filter")) {
+                Section(header: Text(LocalizedStringKey("All news and patches"))) {
+                    Picker(selection: $selectedOptionFilter, label: Text(LocalizedStringKey("Select a filter"))) {
                         Text("All").tag(0)
                         Text("News").tag(1)
                         Text("Patches").tag(2)
