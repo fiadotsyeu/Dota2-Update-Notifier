@@ -12,7 +12,7 @@ Welcome to the Dota2 News and Updates app, built with Swift! This app is designe
 
 ### **Project Goals:**
 - Provide a comprehensive and user-friendly platform for Dota2 enthusiasts.
-- Enhance user engagement through timely notifications and widget integration.
+- Enhance user engagement through timely notifications integration.
 
 ### **Contributions:**
 Contributions and feedback are always welcome! Whether you're a seasoned developer or just starting out, there are plenty of opportunities to get involved and make this project even better. Feel free to submit bug reports, feature requests, or even pull requests to contribute directly to the development.
