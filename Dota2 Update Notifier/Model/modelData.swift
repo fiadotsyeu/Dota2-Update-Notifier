@@ -115,3 +115,28 @@ private func load(_ fileURL: URL) -> [NewsItem] {
         return []
     }
 }
+
+
+@Observable
+class CountNewsItems: ObservableObject {
+    var count: Int
+    
+    init() {
+        self.count = ModelData().newsItems.count
+        NotificationCenter.default.addObserver(forName: .newsItemsDidChange, object: nil, queue: nil) { [weak self] _ in
+            self?.handleNewsItemsChange()
+        }
+    }
+        
+    private func handleNewsItemsChange() {
+        // Updating the count value and executing the function
+        self.count = ModelData().newsItems.count
+        // Call your function here
+        Notifier().postNotification()
+    }
+}
+
+// Extension for notifying changes in ModelData().newsItems
+extension Notification.Name {
+    static let newsItemsDidChange = Notification.Name("newsItemsDidChange")
+}
