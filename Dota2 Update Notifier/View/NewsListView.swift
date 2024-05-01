@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewsListView: View {
     @Environment(ModelData.self) var modelData
-    @State private var selectedOptionFilter = 0
+    @AppStorage("selectedOptionFilter") private var selectedOptionFilter = 0
     
     let rssURLs = [URL(string: "https://www.dotabuff.com/blog.rss"),
                    URL(string: "https://store.steampowered.com/feeds/news/app/570/l=english")]
@@ -70,7 +70,9 @@ struct NewsListView: View {
             .navigationTitle("Dota Updates Notifier")
             .refreshable {
                 rssURLs.forEach { url in
-                    rssParser.parseRSS(from: url!)
+                    Task {
+                        await rssParser.parseRSS(from: url!)
+                    }
                 }
             }
         }
