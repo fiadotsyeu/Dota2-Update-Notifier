@@ -9,8 +9,6 @@ Welcome to the Dota2 News and Updates app, built with Swift! This app is designe
 ### **Key Features:**
 - **News and Updates:** Stay informed with the latest news and updates from the Dota2 community.
 - **Notifications:** Receive timely notifications about important events and updates in the Dota2 world.
-- **Widget Support:** Customize your iOS device with a widget to display real-time Dota2 information right on your home screen.
-- **Professional Gaming Stats:** Dive into detailed statistics of professional Dota2 matches to track your favorite teams and players.
 
 ### **Project Goals:**
 - Provide a comprehensive and user-friendly platform for Dota2 enthusiasts.
