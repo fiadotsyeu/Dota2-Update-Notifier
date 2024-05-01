@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var notificationsNews = false
-    @State private var notificationsPatches = false
-    @State private var notificationsInternational = false
-    @State private var darkMode = false
-    @State private var selectedOptionlanguage = 0
+    @AppStorage("newsNotifications") private var notificationsNews = true
+    @AppStorage("patchesNotifications") private var notificationsPatches = true
+    @AppStorage("updatesNotifications") private var notificationsUpdates = true
+    @AppStorage("internationalNotifications") private var notificationsInternational = true
+    @AppStorage("darkMode") private var darkMode = false
+    @AppStorage("language") private var selectedOptionlanguage = 0
+    
+    var modelData = ModelData()
     
     var body: some View {
         NavigationView {
@@ -23,6 +26,9 @@ struct SettingsView: View {
                     }
                     Toggle(isOn: $notificationsPatches) {
                         hStackOnOff(state: notificationsPatches, text: "Patches")
+                    }
+                    Toggle(isOn: $notificationsUpdates) {
+                        hStackOnOff(state: notificationsUpdates, text: "Updates")
                     }
                     Toggle(isOn: $notificationsInternational) {
                         hStackOnOff(state: notificationsInternational, text: "The International")
@@ -44,6 +50,10 @@ struct SettingsView: View {
                     }
                     .pickerStyle(DefaultPickerStyle())
                 }
+               // for tests
+                Button(action: {modelData.clearDataInFile()}, label: {
+                    Text("clear data news in file")
+                })
             }
             .navigationTitle("Settings")
         }
