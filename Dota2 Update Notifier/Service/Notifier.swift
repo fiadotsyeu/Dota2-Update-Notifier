@@ -10,31 +10,27 @@ import UserNotifications
 
 class Notifier {
     var modelData = ModelData()
-    var count = CountNewsItems().count
     
-    func isNewsListExpanded(countNewsItems: Int) {
-        if count < modelData.newsItems.count {
-            let lastNewsItem = modelData.newsItems[0]
-            
-            let content = UNMutableNotificationContent()
-            content.title = lastNewsItem.title
-            content.sound = UNNotificationSound.default
-            
-            switch lastNewsItem.tag {
-            case "The International":
-                content.body = "New information about The International is here! Check it out!"
-            case "Patch":
-                content.body = "New patch available! Check out what's changed!"
-            case "Update":
-                content.body = "New updates are already waiting for you! Check them out!"
-            default:
-                content.body = "The latest news are already in your app. Be the first to know."
-            }
-            
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-            let request = UNNotificationRequest(identifier: "Dota2 Update Notifer", content: content, trigger: trigger)
-            UNUserNotificationCenter.current().add(request)
+    func postNotification() {
+        let lastNewsItem = modelData.newsItems[0]
+        
+        let content = UNMutableNotificationContent()
+        content.title = lastNewsItem.title
+        content.sound = UNNotificationSound.default
+        
+        switch lastNewsItem.tag {
+        case "The International":
+            content.body = "New information about The International is here! Check it out!"
+        case "Patch":
+            content.body = "New patch available! Check out what's changed!"
+        case "Update":
+            content.body = "New updates are already waiting for you! Check them out!"
+        default:
+            content.body = "The latest news are already in your app. Be the first to know."
         }
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
     }
-    
 }
