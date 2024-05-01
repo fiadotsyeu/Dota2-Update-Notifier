@@ -11,6 +11,7 @@ import SwiftUI
 struct Dota2_Update_NotifierApp: App {
     @State private var modelData = ModelData()
     @AppStorage("darkMode") private var darkMode = false
+    @AppStorage("language") private var selectedOptionlanguage = "en"
     
     var body: some Scene {
         WindowGroup {
@@ -18,6 +19,7 @@ struct Dota2_Update_NotifierApp: App {
             ContentView()
                 .environment(modelData)
                 .preferredColorScheme(darkMode ? .dark : .light)
+                .environment(\.locale, .init(identifier: selectedOptionlanguage))
         }
     }
 }

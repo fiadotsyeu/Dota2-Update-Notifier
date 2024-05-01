@@ -13,40 +13,40 @@ struct SettingsView: View {
     @AppStorage("updatesNotifications") private var notificationsUpdates = true
     @AppStorage("internationalNotifications") private var notificationsInternational = true
     @AppStorage("darkMode") private var darkMode = false
-    @AppStorage("language") private var selectedOptionlanguage = 0
+    @AppStorage("language") private var selectedOptionlanguage = "en"
     
     var modelData = ModelData()
     
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Notifications")) {
+                Section(header: Text(LocalizedStringKey("Notifications"))) {
                     Toggle(isOn: $notificationsNews) {
-                        hStackOnOff(state: notificationsNews, text: "News")
+                        hStackOnOff(state: notificationsNews, text: LocalizedStringKey("News"))
                     }
                     Toggle(isOn: $notificationsPatches) {
-                        hStackOnOff(state: notificationsPatches, text: "Patches")
+                        hStackOnOff(state: notificationsPatches, text: LocalizedStringKey("Patches"))
                     }
                     Toggle(isOn: $notificationsUpdates) {
-                        hStackOnOff(state: notificationsUpdates, text: "Updates")
+                        hStackOnOff(state: notificationsUpdates, text: LocalizedStringKey("Updates"))
                     }
                     Toggle(isOn: $notificationsInternational) {
-                        hStackOnOff(state: notificationsInternational, text: "The International")
+                        hStackOnOff(state: notificationsInternational, text: LocalizedStringKey("The International"))
                     }
                 }
                 
-                Section(header: Text("Appearance")) {
+                Section(header: Text(LocalizedStringKey("Appearance"))) {
                     Toggle(isOn: $darkMode) {
-                        hStackOnOff(state: darkMode, text: "Dark Mode")
+                        hStackOnOff(state: darkMode, text: LocalizedStringKey("Dark Mode"))
                     }
                 }
                 
-                Section(header: Text("Language")) {
-                    Picker(selection: $selectedOptionlanguage, label: Text("Select a language")) {
-                        Text("ENG").tag(0)
-                        Text("CZ").tag(1)
-                        Text("UA").tag(2)
-                        Text("RU").tag(3)
+                Section(header: Text(LocalizedStringKey("Language"))) {
+                    Picker(selection: $selectedOptionlanguage, label: Text(LocalizedStringKey("Select a language"))) {
+                        Text("EN").tag("en")
+                        Text("CZ").tag("cs")
+                        Text("UK").tag("uk")
+                        Text("RU").tag("ru")
                     }
                     .pickerStyle(DefaultPickerStyle())
                 }
@@ -55,14 +55,14 @@ struct SettingsView: View {
                     Text("clear data news in file")
                 })
             }
-            .navigationTitle("Settings")
+            .navigationTitle(LocalizedStringKey("Settings"))
         }
     }
 }
 
 struct hStackOnOff: View {
     var state: Bool
-    var text: String
+    var text: LocalizedStringKey
     
     var body: some View {
         HStack {
