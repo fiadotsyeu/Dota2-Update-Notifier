@@ -10,6 +10,7 @@ import WebKit
 
 struct NewsDetail: View {
     @Environment(ModelData.self) var modelData
+    @Environment(\.colorScheme) var colorScheme
     var newsItem: NewsItem
     
     var newsItemIndex: Int? {
@@ -54,7 +55,7 @@ struct NewsDetail: View {
             }
             
             Divider()
-            HTMLView(htmlContent: generateHTMLContent(content: newsItem.content, colorScheme: .light))
+            HTMLView(htmlContent: generateHTMLContent(content: newsItem.content, colorScheme: colorScheme))
                 .frame(maxWidth: .infinity)
                 .navigationTitle(newsItem.title)
                 .navigationBarTitleDisplayMode(.inline)
