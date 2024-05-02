@@ -23,22 +23,22 @@ struct SettingsView: View {
                 Section(header: Text(LocalizedStringKey("Notifications"))) {
                     Toggle(isOn: $notificationsNews) {
                         hStackOnOff(state: notificationsNews, text: LocalizedStringKey("News"))
-                    }
+                    }.tint(Color("ToggleColor"))
                     Toggle(isOn: $notificationsPatches) {
                         hStackOnOff(state: notificationsPatches, text: LocalizedStringKey("Patches"))
-                    }
+                    }.tint(Color("ToggleColor"))
                     Toggle(isOn: $notificationsUpdates) {
                         hStackOnOff(state: notificationsUpdates, text: LocalizedStringKey("Updates"))
-                    }
+                    }.tint(Color("ToggleColor"))
                     Toggle(isOn: $notificationsInternational) {
                         hStackOnOff(state: notificationsInternational, text: LocalizedStringKey("The International"))
-                    }
+                    }.tint(Color("ToggleColor"))
                 }
                 
                 Section(header: Text(LocalizedStringKey("Appearance"))) {
                     Toggle(isOn: $darkMode) {
                         hStackOnOff(state: darkMode, text: LocalizedStringKey("Dark Mode"))
-                    }
+                    }.tint(Color("ToggleColor"))
                 }
                 
                 Section(header: Text(LocalizedStringKey("Language"))) {
@@ -60,13 +60,6 @@ struct SettingsView: View {
                         }
                     }
                 }
-               // for tests
-                Button(action: {modelData.clearDataInFile()}, label: {
-                    Text("clear data news in file")
-                })
-                Button(action: { Notifier().postNotification() }, label: {
-                    Text("notifier")
-                })
             }
             .navigationTitle(LocalizedStringKey("Settings"))
         }

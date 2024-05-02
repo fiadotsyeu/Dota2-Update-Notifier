@@ -37,7 +37,7 @@ struct NavBarView: View {
             .padding(.bottom, 14)
             .padding(.horizontal, 4)
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 90)
-            .background(.gray)
+            .background(Color("MenuBG")).opacity(0.9)
             .ignoresSafeArea(.all)
         }
         .ignoresSafeArea(.all)
@@ -60,17 +60,17 @@ struct NavBarItem: View {
                     if (tab == "Favorites" && selected == tab) {
                         Image("Favorites.fill")
                             .resizable()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 22, height: 22)
                             .colorMultiply(.red)
                     } else {
                         Image(tab)
                             .resizable()
-                            .frame(width: 20, height: 20)
-                            .colorMultiply(.black)
+                            .frame(width: 22, height: 22)
+                            .colorMultiply(selected == tab ? Color("MenuBG") : .red)
                     }
                     if selected == tab {
                         Text(LocalizedStringKey(tab))
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("MenuBG"))
                     }
                 
                 }
@@ -79,7 +79,7 @@ struct NavBarItem: View {
         .opacity(selected == tab ? 1 : 0.7)
         .padding(.vertical, 10)
         .padding(.horizontal, 17)
-        .background(selected == tab ? .white : .gray)
+        .background(selected == tab ? .white : Color("MenuBG").opacity(0.0))
         .clipShape(Capsule())
     }
 }

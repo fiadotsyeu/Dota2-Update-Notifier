@@ -43,9 +43,12 @@ struct NewsDetail: View {
                     .bold()
                 if let url = newsItem.url {
                     Link(LocalizedStringKey("Go to the link"), destination: url)
+                        .font(.subheadline)
+                        .tint(.red)
                 } else {
                     // Handling the case when the URL is nil
                     Text(LocalizedStringKey("No link available"))
+                        .font(.subheadline)
                 }
                 Spacer()
                 Text("Date:")
@@ -121,7 +124,7 @@ func generateHTMLContent(content: String, colorScheme: ColorScheme) -> String {
             body {
                 font-size: 20px;
                 margin: 10px;
-                background-color: \(colorScheme == .dark ? "#333333" : "#ffffff"); /* Changing background color depending on the current theme */
+                background-color: \(colorScheme == .dark ? "#000000" : "#ffffff"); /* Changing background color depending on the current theme */
                 color: \(colorScheme == .dark ? "#ffffff" : "#000000"); /* Changing text color depending on the current theme */
             }
             img {
@@ -129,8 +132,8 @@ func generateHTMLContent(content: String, colorScheme: ColorScheme) -> String {
                 height: auto;
             }
             a {
-                color: \(colorScheme == .dark ? "#ffffff" : "#000000"); /* Цвет ссылки */
-                text-decoration: underline; /* Подчеркивание для ссылок */
+                color: \(colorScheme == .dark ? "#FF2600" : "#FF2600"); /* Url color */
+                text-decoration: underline;
             }
         </style>
     </head>
