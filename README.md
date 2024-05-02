@@ -21,8 +21,9 @@ Dark and Light Themes: The application supports both dark and light modes for us
 - UserNotifications: Used for sending notifications to the user about new events in the game.
 
 ### Screenshots
-  <img src="Simulator Screenshot - 1.png"><img src="Simulator Screenshot - 2.png"><img src="Simulator Screenshot - 3.png">
-  <img src="Simulator Screenshot - 4.png"><img src="Simulator Screenshot - 5.png"><img src="Simulator Screenshot - 6.png">
+  <img src="Simulator Screenshot - 1.png" width="300">  <img src="Simulator Screenshot - 2.png" width="300">  <img src="Simulator Screenshot - 3.png" width="300">
+
+  <img src="Simulator Screenshot - 4.png" width="300">  <img src="Simulator Screenshot - 5.png" width="300">  <img src="Simulator Screenshot - 6.png" width="300">
 
 ### **Contributions:**
 Contributions and feedback are always welcome! Whether you're a seasoned developer or just starting out, there are plenty of opportunities to get involved and make this project even better. Feel free to submit bug reports, feature requests, or even pull requests to contribute directly to the development.
