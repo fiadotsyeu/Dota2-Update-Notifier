@@ -20,13 +20,14 @@ class Notifier {
         
         switch lastNewsItem.tag {
         case "The International":
-            content.body = "New information about The International is here! Check it out!"
+            content.body = NSLocalizedString("New information about The International is here! Check it out!", comment: "")
         case "Patch":
-            content.body = "New patch available! Check out what's changed!"
+            content.body = NSLocalizedString("New patch available! Check out what's changed!", comment: "")
         case "Update":
-            content.body = "New updates are already waiting for you! Check them out!"
+            content.body = NSLocalizedString("New updates are already waiting for you! Check them out!", comment: "")
         default:
-            content.body = "The latest news are already in your app. Be the first to know."
+            content.body = NSLocalizedString("The latest news are already in your app. Be the first to know!", comment: "")
+            print(content.body)
         }
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
