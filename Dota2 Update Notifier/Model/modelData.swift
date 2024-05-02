@@ -34,17 +34,17 @@ class ModelData: ObservableObject {
             
     
     private func createFile(at url: URL) -> Bool {
-            do {
-                let defaultData = Data() // Creating empty data.
-                try defaultData.write(to: url) // Writing empty data to the file.
-                print("A new file has been created \(url)")
-                self.newsItems = load(url)
-                return true
-            } catch {
-                print("Error creating the file: \(error)")
-                return false
-            }
+        do {
+            let defaultData = Data() // Creating empty data.
+            try defaultData.write(to: url) // Writing empty data to the file.
+            print("A new file has been created \(url)")
+            self.newsItems = load(url)
+            return true
+        } catch {
+            print("Error creating the file: \(error)")
+            return false
         }
+    }
     
     func save() {
         do {
@@ -69,20 +69,18 @@ class ModelData: ObservableObject {
     }
     
     
-    func deleteFile() -> Bool {
+    func deleteFile() {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let url = documentsDirectory.appendingPathComponent("newsItemData.json")
         do {
             try FileManager.default.removeItem(at: url)
             print("The data has been deleted.")
-            return true
         } catch {
             print("Error deleting the file: \(error)")
-            return false
         }
     }
     
-    func clearDataInFile() -> Bool {
+    func clearDataInFile() {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let url = documentsDirectory.appendingPathComponent("newsItemData.json")
         
@@ -94,10 +92,8 @@ class ModelData: ObservableObject {
             try emptyData.write(to: url)
             print("The data in the file has been successfully cleared.")
             self.newsItems = load(url)
-            return true
         } catch {
             print("Error clearing data in the file: \(error)")
-            return false
         }
     }
 
