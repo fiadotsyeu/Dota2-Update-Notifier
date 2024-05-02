@@ -12,6 +12,12 @@
 		8109FB082BE0CA3F00F342A6 /* logo_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8109FB072BE0CA3F00F342A6 /* logo_dark.png */; };
 		8109FB0C2BE0E63800F342A6 /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109FB0B2BE0E63800F342A6 /* Notifier.swift */; };
 		8109FB0E2BE1340A00F342A6 /* Dota2-Update-Notifier-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8109FB0D2BE132DB00F342A6 /* Dota2-Update-Notifier-Info.plist */; };
+		81A4F10E2BE407D100B27429 /* Simulator Screenshot - 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A4F1082BE407D100B27429 /* Simulator Screenshot - 1.png */; };
+		81A4F10F2BE407D100B27429 /* Simulator Screenshot - 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A4F1092BE407D100B27429 /* Simulator Screenshot - 4.png */; };
+		81A4F1102BE407D100B27429 /* Simulator Screenshot - 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A4F10A2BE407D100B27429 /* Simulator Screenshot - 2.png */; };
+		81A4F1112BE407D100B27429 /* Simulator Screenshot - 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A4F10B2BE407D100B27429 /* Simulator Screenshot - 6.png */; };
+		81A4F1122BE407D100B27429 /* Simulator Screenshot - 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A4F10C2BE407D100B27429 /* Simulator Screenshot - 3.png */; };
+		81A4F1132BE407D100B27429 /* Simulator Screenshot - 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A4F10D2BE407D100B27429 /* Simulator Screenshot - 5.png */; };
 		81CD55492BE246390024D35B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81CD55472BE246390024D35B /* Localizable.strings */; };
 		CE7C64C52BD635FC0066ACCC /* FavoritsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C12BD635FB0066ACCC /* FavoritsView.swift */; };
 		CE7C64C62BD635FC0066ACCC /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C64C22BD635FC0066ACCC /* NewsListView.swift */; };
@@ -55,6 +61,12 @@
 		8109FB072BE0CA3F00F342A6 /* logo_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_dark.png; sourceTree = "<group>"; };
 		8109FB0B2BE0E63800F342A6 /* Notifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
 		8109FB0D2BE132DB00F342A6 /* Dota2-Update-Notifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Dota2-Update-Notifier-Info.plist"; sourceTree = SOURCE_ROOT; };
+		81A4F1082BE407D100B27429 /* Simulator Screenshot - 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - 1.png"; path = "../../Desktop/Simulator Screenshot - 1.png"; sourceTree = "<group>"; };
+		81A4F1092BE407D100B27429 /* Simulator Screenshot - 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - 4.png"; path = "../../Desktop/Simulator Screenshot - 4.png"; sourceTree = "<group>"; };
+		81A4F10A2BE407D100B27429 /* Simulator Screenshot - 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - 2.png"; path = "../../Desktop/Simulator Screenshot - 2.png"; sourceTree = "<group>"; };
+		81A4F10B2BE407D100B27429 /* Simulator Screenshot - 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - 6.png"; path = "../../Desktop/Simulator Screenshot - 6.png"; sourceTree = "<group>"; };
+		81A4F10C2BE407D100B27429 /* Simulator Screenshot - 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - 3.png"; path = "../../Desktop/Simulator Screenshot - 3.png"; sourceTree = "<group>"; };
+		81A4F10D2BE407D100B27429 /* Simulator Screenshot - 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screenshot - 5.png"; path = "../../Desktop/Simulator Screenshot - 5.png"; sourceTree = "<group>"; };
 		81CD55482BE246390024D35B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		81CD554A2BE2469D0024D35B /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		81CD554B2BE2469E0024D35B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -106,6 +118,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81A4F0FB2BE4058D00B27429 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				81A4F1082BE407D100B27429 /* Simulator Screenshot - 1.png */,
+				81A4F10A2BE407D100B27429 /* Simulator Screenshot - 2.png */,
+				81A4F10C2BE407D100B27429 /* Simulator Screenshot - 3.png */,
+				81A4F1092BE407D100B27429 /* Simulator Screenshot - 4.png */,
+				81A4F10D2BE407D100B27429 /* Simulator Screenshot - 5.png */,
+				81A4F10B2BE407D100B27429 /* Simulator Screenshot - 6.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		CE7C64CB2BD636700066ACCC /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +143,7 @@
 		CE878E672BCBB3F7008CD92F = {
 			isa = PBXGroup;
 			children = (
+				81A4F0FB2BE4058D00B27429 /* Screenshots */,
 				8109FB052BE0CA3800F342A6 /* logo_light.png */,
 				8109FB072BE0CA3F00F342A6 /* logo_dark.png */,
 				8109FAF52BE0B80900F342A6 /* README.md */,
@@ -320,10 +346,16 @@
 				8109FB0E2BE1340A00F342A6 /* Dota2-Update-Notifier-Info.plist in Resources */,
 				8109FAF62BE0B80900F342A6 /* README.md in Resources */,
 				8109FB082BE0CA3F00F342A6 /* logo_dark.png in Resources */,
+				81A4F10E2BE407D100B27429 /* Simulator Screenshot - 1.png in Resources */,
+				81A4F1112BE407D100B27429 /* Simulator Screenshot - 6.png in Resources */,
+				81A4F1122BE407D100B27429 /* Simulator Screenshot - 3.png in Resources */,
 				81CD55492BE246390024D35B /* Localizable.strings in Resources */,
 				8109FB062BE0CA3800F342A6 /* logo_light.png in Resources */,
+				81A4F1102BE407D100B27429 /* Simulator Screenshot - 2.png in Resources */,
 				CE878E7B2BCBB3FA008CD92F /* Preview Assets.xcassets in Resources */,
 				CE878E782BCBB3FA008CD92F /* Assets.xcassets in Resources */,
+				81A4F10F2BE407D100B27429 /* Simulator Screenshot - 4.png in Resources */,
+				81A4F1132BE407D100B27429 /* Simulator Screenshot - 5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
