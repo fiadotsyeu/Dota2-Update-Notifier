@@ -82,7 +82,7 @@ class RSSParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item" {
-            let newsItem = NewsItem(title: currentTitle, date: formatDate(currentPubDate)!, content: currentDescription, url: URL(string: currentLink), imageURL: URL(string: currentImgURL), isFavorite: false, tag: filterNewsItemsByTag(title: currentTitle))
+            let newsItem = NewsItem(title: currentTitle, date: formatDate(currentPubDate) ?? "No data", content: currentDescription, url: URL(string: currentLink), imageURL: URL(string: currentImgURL), isFavorite: false, tag: filterNewsItemsByTag(title: currentTitle))
             
             if !dublicateFinder(title: newsItem.title) {
                 modelData.newsItems.append(newsItem)
