@@ -14,8 +14,8 @@ struct SettingsView: View {
     @AppStorage("internationalNotifications") private var notificationsInternational = true
     @AppStorage("darkMode") private var darkMode = false
     @AppStorage("language") private var selectedOptionlanguage = "en"
-    
-    var modelData = ModelData()
+
+    @Environment(ModelData.self) var modelData
     
     var body: some View {
         NavigationView {
@@ -50,9 +50,22 @@ struct SettingsView: View {
                     }
                     .pickerStyle(DefaultPickerStyle())
                 }
+                .onChange(of: selectedOptionlanguage) {
+                    let rssParser = RSSParser(modelData: modelData)
+                    var rssURLs = updateContentForAppLanguage(language: selectedOptionlanguage)
+                    modelData.clearDataInFile()
+                    rssURLs.forEach { url in
+                        Task {
+                            await rssParser.parseRSS(from: url)
+                        }
+                    }
+                }
                // for tests
                 Button(action: {modelData.clearDataInFile()}, label: {
                     Text("clear data news in file")
+                })
+                Button(action: { Notifier().postNotification() }, label: {
+                    Text("notifier")
                 })
             }
             .navigationTitle(LocalizedStringKey("Settings"))
@@ -71,6 +84,23 @@ struct hStackOnOff: View {
             Text(state ? "On" : "Off")
                 .font(.subheadline)
         }
+    }
+}
+
+func updateContentForAppLanguage(language: String) -> [URL] {
+    switch language {
+    case "cs":
+        return [URL(string: "https://cs.dotabuff.com/blog.rss"),
+                URL(string: "https://store.steampowered.com/feeds/news/app/570/?l=czech")].compactMap { $0 }
+    case "uk":
+        return [URL(string: "https://uk.dotabuff.com/blog.rss"), // It's unclear why, but Ukrainian language only works with this link...
+                URL(string: "https://store.steampowered.com/feeds/news/app/570/?cc=CZ&l=ukrainian&snr=1_2108_9__2107")].compactMap { $0 }
+    case "ru":
+        return [URL(string: "https://ru.dotabuff.com/blog.rss"),
+                URL(string: "https://store.steampowered.com/feeds/news/app/570/?l=russian")].compactMap { $0 }
+    default:
+        return [URL(string: "https://www.dotabuff.com/blog.rss"),
+                URL(string: "https://store.steampowered.com/feeds/news/app/570/?l=english")].compactMap { $0 }
     }
 }
 

@@ -11,11 +11,11 @@ import BackgroundTasks
 
 struct ContentView: View {
     @Environment(ModelData.self) var modelData
-    let rssURLs = [URL(string: "https://www.dotabuff.com/blog.rss"),
-                   URL(string: "https://store.steampowered.com/feeds/news/app/570/l=english")]
+    @AppStorage("language") private var selectedOptionlanguage = "en"
     
     var body: some View {
         let rssParser = RSSParser(modelData: modelData)
+        var rssURLs = updateContentForAppLanguage(language: selectedOptionlanguage)
         
         NavBarView()
             .onAppear {
@@ -29,7 +29,7 @@ struct ContentView: View {
                 for url in rssURLs {
                     Task {
                         do {
-                            await rssParser.parseRSS(from: url!)
+                            await rssParser.parseRSS(from: url)
                             print("date: \(Date()), sync rss parser starting")
                         }
                     }
@@ -63,16 +63,14 @@ struct ContentView: View {
         
     private func handleBackgroundTask(task: BGProcessingTask) {
         let rssParser = RSSParser(modelData: modelData)
-        
+        let rssURLs = updateContentForAppLanguage(language: selectedOptionlanguage)
+
         for url in rssURLs {
             Task {
                 do {
-                    await rssParser.parseRSS(from: url!)
+                    await rssParser.parseRSS(from: url)
                     print("date: \(Date()), sync rss parser starting")
                     task.setTaskCompleted(success: true)
-                } catch {
-                    print("Error parsing RSS: \(error)")
-                    task.setTaskCompleted(success: false)
                 }
             }
         }

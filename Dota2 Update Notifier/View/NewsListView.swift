@@ -10,9 +10,7 @@ import SwiftUI
 struct NewsListView: View {
     @Environment(ModelData.self) var modelData
     @AppStorage("selectedOptionFilter") private var selectedOptionFilter = 0
-    
-    let rssURLs = [URL(string: "https://www.dotabuff.com/blog.rss"),
-                   URL(string: "https://store.steampowered.com/feeds/news/app/570/l=english")]
+    @AppStorage("language") private var selectedOptionlanguage = "en"
         
     func applyFilter(filteredBy: Int) -> [NewsItem] {
         var sortedItems: [NewsItem]
@@ -31,6 +29,7 @@ struct NewsListView: View {
         }
         
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "dd MMMM yyyy, HH:mm"
         
         sortedItems.sort { (item1, item2) -> Bool in
@@ -46,6 +45,7 @@ struct NewsListView: View {
 
     var body: some View {
         let rssParser = RSSParser(modelData: modelData)
+        var rssURLs = updateContentForAppLanguage(language: selectedOptionlanguage)
         
         NavigationView {
             List {
@@ -66,12 +66,19 @@ struct NewsListView: View {
                     }
                 }
             }
+            .onAppear {
+                rssURLs.forEach { url in
+                    Task {
+                        await rssParser.parseRSS(from: url)
+                    }
+                }
+            }
             .animation(.default, value: selectedOptionFilter)
             .navigationTitle("Dota Updates Notifier")
             .refreshable {
                 rssURLs.forEach { url in
                     Task {
-                        await rssParser.parseRSS(from: url!)
+                        await rssParser.parseRSS(from: url)
                     }
                 }
             }
