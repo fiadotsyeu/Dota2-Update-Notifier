@@ -31,3 +31,9 @@
 "Go to the link" = "Jít na odkaz";
 "No link available" = "Odkaz není k dispozici";
 "Date:" = "Datum:";
+
+// Notifier
+"New information about The International is here! Check it out!" = "Nové informace o The International jsou tady! Podívejte se!";
+"New patch available! Check out what's changed!" = "Nový patch k dispozici! Podívejte se, co se změnilo!";
+"New updates are already waiting for you! Check them out!" = "Nové aktualizace již na vás čekají! Podívejte se na ně!";
+"The latest news are already in your app. Be the first to know!" = "Nejnovější zprávy již jsou ve vaší aplikaci. Buďte první, kdo ví!";

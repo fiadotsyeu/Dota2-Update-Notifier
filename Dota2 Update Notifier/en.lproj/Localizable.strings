@@ -31,3 +31,9 @@
 "Go to the link" = "Go to the link";
 "No link available" = "No link available";
 "Date:" = "Date:";
+
+// Notifier
+"New information about The International is here! Check it out!" = "New information about The International is here! Check it out!";
+"New patch available! Check out what's changed!" = "New patch available! Check out what's changed!";
+"New updates are already waiting for you! Check them out!" = "New updates are already waiting for you! Check them out!";
+"The latest news are already in your app. Be the first to know!" = "The latest news are already in your app. Be the first to know!";

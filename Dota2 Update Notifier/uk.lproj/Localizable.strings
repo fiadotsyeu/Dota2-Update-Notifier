@@ -31,3 +31,9 @@
 "Go to the link" = "Перейти за посиланням";
 "No link available" = "Посилання відсутнє";
 "Date:" = "Дата:";
+
+// Notifier
+"New information about The International is here! Check it out!" = "Нова інформація про The International вже тут! Перевірте це!";
+"New patch available! Check out what's changed!" = "Доступен новий патч! Перегляньте, що змінилося!";
+"New updates are already waiting for you! Check them out!" = "Нові оновлення вже чекають на вас! Перевірте їх!";
+"The latest news are already in your app. Be the first to know!" = "Останні новини вже у вашому додатку. Будьте першими, хто знає!";
