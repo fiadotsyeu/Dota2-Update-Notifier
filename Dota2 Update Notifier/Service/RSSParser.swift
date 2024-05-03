@@ -112,12 +112,12 @@ class RSSParser: NSObject, XMLParserDelegate {
     }
     
     func filterNewsItemsByTag(title: String) -> String {
-        if title.lowercased().contains("patch") {
-            return "Patch"
-        } else if title.lowercased().contains("the international") {
-            return "The International"
-        } else if title.lowercased().contains("update") {
+        if title.lowercased().contains("update") || title.lowercased().contains("aktualizace") || title.lowercased().contains("оновлення") || title.lowercased().contains("обновление dota"){
             return "Update"
+        } else if title.lowercased().contains("the international"){
+            return "The International"
+        } else if title.lowercased().contains("patch") ||  title.lowercased().contains("herní aktualizace") || title.lowercased().contains("iгроладне оновлення") || title.lowercased().contains("обновление"){
+            return "Patch"
         } else {
             return "News"
         }
