@@ -7,9 +7,14 @@
 
 import Foundation
 import UserNotifications
+import SwiftUI
 
 class Notifier {
     var modelData = ModelData()
+    @AppStorage("newsNotifications") private var notificationsNews = true
+    @AppStorage("patchesNotifications") private var notificationsPatches = true
+    @AppStorage("updatesNotifications") private var notificationsUpdates = true
+    @AppStorage("internationalNotifications") private var notificationsInternational = true
     
     func postNotification() {
         let lastNewsItem = modelData.newsItems[0]
@@ -20,14 +25,21 @@ class Notifier {
         
         switch lastNewsItem.tag {
         case "The International":
-            content.body = NSLocalizedString("New information about The International is here! Check it out!", comment: "")
+            if notificationsInternational == true {
+                content.body = NSLocalizedString("New information about The International is here! Check it out!", comment: "")
+            }
         case "Patch":
-            content.body = NSLocalizedString("New patch available! Check out what's changed!", comment: "")
+            if notificationsPatches == true {
+                content.body = NSLocalizedString("New patch available! Check out what's changed!", comment: "")
+            }
         case "Update":
-            content.body = NSLocalizedString("New updates are already waiting for you! Check them out!", comment: "")
+            if notificationsUpdates == true {
+                content.body = NSLocalizedString("New updates are already waiting for you! Check them out!", comment: "")
+            }
         default:
-            content.body = NSLocalizedString("The latest news are already in your app. Be the first to know!", comment: "")
-            print(content.body)
+            if notificationsNews == true {
+                content.body = NSLocalizedString("The latest news are already in your app. Be the first to know!", comment: "")
+            }
         }
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
